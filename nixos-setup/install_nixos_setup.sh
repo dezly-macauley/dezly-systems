@@ -35,6 +35,16 @@ sudo mkdir -p /etc/nixos/database-systems \
 
 #______________________________________________________________________________ 
 
+# SUB_SECTION: Install Rust
+
+cd $HOME/dezly-system-setups/nixos-setup/\
+nixos-config/programming-languages/
+
+sudo mkdir -p /etc/nixos/programming-languages \
+&& sudo cp rust.nix /etc/nixos/programming-languages/
+
+#______________________________________________________________________________ 
+
 # SUB_SECTION: Install Go
 
 cd $HOME/dezly-system-setups/nixos-setup/\
