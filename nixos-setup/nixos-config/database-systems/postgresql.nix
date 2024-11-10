@@ -31,4 +31,14 @@
         '';
     };
 
+    # NOTE: Additional Packages
+
+        environment.systemPackages = with pkgs; [
+
+            # A cross-platform graphical user interface,
+            # that supports most SQL databases
+            dbeaver-bin
+
+        ];
+
 }

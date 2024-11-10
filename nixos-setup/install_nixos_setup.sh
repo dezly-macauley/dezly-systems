@@ -23,9 +23,24 @@
 
 # SUB_SECTION: Install PostgreSQL
 
-cd ./nixos-config/
+cd $HOME/dezly-system-setups/nixos-setup/\
+nixos-config/database-systems/
 
-sudo cp postgresql.nix /etc/nixos/
+sudo mkdir -p /etc/nixos/database-systems \
+&& sudo cp postgresql.nix /etc/nixos/database-systems/
 
+#==============================================================================
+
+                                # SECTION: Programming Languages
+
+#______________________________________________________________________________ 
+
+# SUB_SECTION: Install Go
+
+cd $HOME/dezly-system-setups/nixos-setup/\
+nixos-config/programming-languages/
+
+sudo mkdir -p /etc/nixos/programming-languages \
+&& sudo cp go.nix /etc/nixos/programming-languages/
 
 #==============================================================================
