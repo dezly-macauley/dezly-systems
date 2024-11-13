@@ -35,6 +35,12 @@
 
         environment.systemPackages = with pkgs; [
 
+            # A command line interface for interacting 
+            # with PostgreSQL databases.
+            # Unlike `psql` (the default cli tool that postgreSQL comes with),
+            # `pgcli` has autocompletion and syntax highlighting.
+            pgcli
+
             # A cross-platform graphical user interface,
             # that supports most SQL databases
             dbeaver-bin
