@@ -63,4 +63,14 @@ etc/nixos/programming-languages/
 sudo mkdir -p /etc/nixos/programming-languages \
 && sudo cp python.nix /etc/nixos/programming-languages/
 
+#______________________________________________________________________________ 
+
+# SUB_SECTION: Install PHP
+
+cd $HOME/dezly-system-setups/nixos-setup/nixos-config/\
+etc/nixos/programming-languages/
+
+sudo mkdir -p /etc/nixos/programming-languages \
+&& sudo cp php.nix /etc/nixos/programming-languages/
+
 #==============================================================================
