@@ -101,7 +101,7 @@
             gcc      
             gnumake
             glibc
-            libstdcxx5
+            # libstdcxx5
 
 		    gnutar
             curl
