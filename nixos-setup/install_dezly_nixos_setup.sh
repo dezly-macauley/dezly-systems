@@ -112,5 +112,14 @@ etc/nixos/core-settings/
 
 sudo mkdir -p /etc/nixos/core-settings \
 && sudo cp power_optimisation.nix /etc/nixos/core-settings/
+#______________________________________________________________________________ 
+
+# SUB_SECTION: Code Editor Setups
+
+cd $HOME/dezly-system-setups/nixos-setup/nixos-config/\
+etc/nixos/core-settings/
+
+sudo mkdir -p /etc/nixos/core-settings \
+&& sudo cp code_editor_setups.nix /etc/nixos/core-settings/
 
 #==============================================================================
