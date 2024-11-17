@@ -1,0 +1,21 @@
+import = [
+"~/.config/alacritty/aura_theme.toml",
+]
+
+[cursor.style]
+    shape = "Underline"
+
+[cursor]
+    thickness = 0.25
+
+[window]
+	padding = { x = 12, y = 12 }
+    dynamic_padding = true
+	opacity = 0.85
+
+[font]
+	size = 14.25
+	normal = { family = "MesloLGM Nerd Font", style = "Regular" }
+	bold = { family = "MesloLGM Nerd Font", style = "Bold" }
+	italic = { family = "MesloLGM Nerd Font", style = "Italic" }
+	bold_italic = { family = "MesloLGM Nerd Font", style = "Bold Italic" }

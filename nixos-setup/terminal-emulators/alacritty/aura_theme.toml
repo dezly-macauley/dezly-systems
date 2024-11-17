@@ -1,0 +1,33 @@
+[colors.bright]
+black = "#4d4d4d"
+blue = "#a277ff"
+cyan = "#61ffca"
+green = "#61ffca"
+magenta = "#a277ff"
+red = "#ff6767"
+white = "#edecee"
+yellow = "#ffca85"
+
+[colors.cursor]
+cursor = "#A748C8"
+
+[colors.normal]
+black = "#110f18"
+blue = "#a277ff"
+cyan = "#61ffca"
+green = "#61ffca"
+magenta = "#a277ff"
+red = "#ff6767"
+white = "#edecee"
+yellow = "#ffca85"
+
+[colors.primary]
+background = "#000000"
+foreground = "#edecee"
+
+[colors.selection]
+# background = "#29263c"
+# The colour to be used when I highlight an output
+# In the terminal by holding down left-click with my mouse
+background = "#7600a1"
+text = "CellForeground"

@@ -1,3 +1,7 @@
+#!/usr/bin/env zsh
+
+#==============================================================================
+
 # ABOUT: A script to install Dezly Macauley's NixOS setup
 
 #==============================================================================
@@ -62,9 +66,9 @@ echo "Your previous nixos-setup will be backed up at this location:"
 echo $backup_location
 echo " "
 
-#______________________________________________________________________________
+#==============================================================================
 
-                            # SECTION: Shell Settings (ZSH)
+                            # SECTION: Shell Settings ( ZSH )
 
 # Backup the previous configuration
 cd $HOME
@@ -74,11 +78,40 @@ sudo cp .zshrc $backup_location
 sudo rm .zshrc 
 
 # Create a sym link of the current configuration
-cd "$full_repo_path/shell-configs/zsh"
 ln -sf "$full_repo_path/shell-configs/zsh/.zshrc" "$HOME/.zshrc"
 
 echo " "
 echo "Zsh configuration installed successfully"
 echo " "
 
-#______________________________________________________________________________
+#==============================================================================
+
+                            # SECTION: Terminal Emulator ( Alacritty )
+
+# The location of the latest Alacritty configuration
+source_dir="$full_repo_path/terminal-emulators/alacritty"
+
+# The location where Alacritty expects the configuration to be,
+# this is where the sym link will be created
+target_dir="$HOME/.config/alacritty"
+
+# Check if the target directory already exists then make a backup 
+if [ -d "$target_dir" ]; then
+
+    # Make a backup of the actual configuration, not the symlink
+    real_target_dir=$(realpath "$target_dir")
+    cp -r "$real_target_dir" "$backup_location"
+
+    # Remove the previous configuration
+    rm -rf "$target_dir"
+
+fi
+
+# Create the symlink of the latest configuration
+ln -s "$source_dir" "$target_dir"
+
+echo " "
+echo "Alacritty configuration installed successfully"
+echo " "
+
+#==============================================================================
