@@ -1,0 +1,84 @@
+# ABOUT: A script to install Dezly Macauley's NixOS setup
+
+#==============================================================================
+
+# To make this script executable, first navigate to the location where this 
+# script is and then run the following command:
+# chmod +x install_dezly_macauley_nixos_setup.sh
+# ---------------------------------------------------------------------------
+# Then run the file with this command:
+# source install_dezly_macauley_nixos_setup
+
+#==============================================================================
+
+# SECTION: Pre-Installation Setup
+
+#______________________________________________________________________________
+
+# SUB_SECTION: Installation PATH
+
+# Leave this the same unless this repo is not in your home directory
+# Do not put a `/` after the path name
+parent_path="$HOME"
+
+# Leave this the same unless you renamed the repo
+repo_name="dezly-system-setups"
+
+full_repo_path="$parent_path/$repo_name/nixos-setup"
+
+#______________________________________________________________________________
+
+# SUB_SECTION: Backup Path for previous configuration 
+
+# This is the time format used when creating a directory 
+# to backup your previous configuration files 
+# before proceeding with the install
+# An example of the format:
+# 17-november-2024-10-19-56-am
+current_date_and_time=$(date +"%-d-%B-%Y-%I-%M-%S-%p"\
+| tr '[:upper:]' '[:lower:]')
+
+# Generate a directory name for the backup based on the current time
+backup_path_name="$HOME/backup-of-previous-nixos-setup/$current_date_and_time"
+
+# Store the fixed value of backup_location in another variable,
+# so that the file path does not change
+backup_location="$backup_path_name"
+
+mkdir -p $backup_location
+
+#==============================================================================
+
+# SECTION: Pre-Installation Message
+
+echo " "
+echo "Installing NixOS setup from:"
+echo $full_repo_path
+echo " "
+echo "Current date and time:"
+echo $current_date_and_time
+echo " "
+echo "Your previous nixos-setup will be backed up at this location:"
+echo $backup_location
+echo " "
+
+#______________________________________________________________________________
+
+                            # SECTION: Shell Settings (ZSH)
+
+# Backup the previous configuration
+cd $HOME
+sudo cp .zshrc $backup_location
+
+# Delete the current configuration
+sudo rm .zshrc 
+
+# Create a sym link of the current configuration
+cd "$full_repo_path/shell-configs/zsh"
+ln -sf "$full_repo_path/shell-configs/zsh/.zshrc" "$HOME/.zshrc"
+
+echo " "
+echo "Zsh configuration installed successfully"
+echo " "
+
+#______________________________________________________________________________
