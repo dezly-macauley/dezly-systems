@@ -118,10 +118,10 @@ echo " "
 
 			    # SECTION: Code Editor (NvChad)
 
-# The location of the latest Chad configuration
-source_dir="$full_repo_path/code-editors/nvchad/nvim/"
+# The location of the latest LazyVim configuration
+source_dir="$full_repo_path/code-editors/lazyvim/nvim/"
 
-# The location where Neovime expects the configuration to be.
+# The location where Neovim expects the configuration to be.
 # This is where the sym link will be created
 target_dir="$HOME/.config/nvim"
 
@@ -138,6 +138,7 @@ if [ -d "$target_dir" ]; then
     # Clear the local cache (temp files stored in memory), 
     # and uninstall any plugins to ensure that there are no issues
     # and conflicts from a previous installation
+    rm -rf $HOME/.local/cache/nvim
     rm -rf $HOME/.local/state/nvim
     rm -rf $HOME/.local/share/nvim
 
@@ -147,7 +148,7 @@ fi
 ln -s "$source_dir" "$target_dir"
 
 echo " "
-echo "NvChad configuration installed successfully"
+echo "LazyVim configuration installed successfully"
 echo " "
 
 #==============================================================================
