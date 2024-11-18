@@ -115,3 +115,39 @@ echo "Alacritty configuration installed successfully"
 echo " "
 
 #==============================================================================
+
+			    # SECTION: Code Editor (NvChad)
+
+# The location of the latest Chad configuration
+source_dir="$full_repo_path/code-editors/nvchad/nvim/"
+
+# The location where Neovime expects the configuration to be.
+# This is where the sym link will be created
+target_dir="$HOME/.config/nvim"
+
+# Check if the target directory already exists then make a backup 
+if [ -d "$target_dir" ]; then
+
+    # Make a backup of the actual configuration, not the symlink
+    real_target_dir=$(realpath "$target_dir")
+    cp -r "$real_target_dir" "$backup_location"
+
+    # Remove the previous configuration
+    rm -rf "$target_dir"
+	
+    # Clear the local cache (temp files stored in memory), 
+    # and uninstall any plugins to ensure that there are no issues
+    # and conflicts from a previous installation
+    rm -rf $HOME/.local/state/nvim
+    rm -rf $HOME/.local/share/nvim
+
+fi
+
+# Create the symlink of the latest configuration
+ln -s "$source_dir" "$target_dir"
+
+echo " "
+echo "NvChad configuration installed successfully"
+echo " "
+
+#==============================================================================
