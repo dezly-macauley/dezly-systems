@@ -116,7 +116,7 @@ echo " "
 
 #==============================================================================
 
-			    # SECTION: Code Editor (NvChad)
+			    # SECTION: Code Editor (LazyVim)
 
 # The location of the latest LazyVim configuration
 source_dir="$full_repo_path/code-editors/lazyvim/nvim/"
@@ -149,6 +149,36 @@ ln -s "$source_dir" "$target_dir"
 
 echo " "
 echo "LazyVim configuration installed successfully"
+echo " "
+
+#==============================================================================
+
+			    # SECTION: Code Editor (LazyVim)
+
+# The location of the latest LazyVim configuration
+source_dir="$full_repo_path/desktop-environment/hyprland/hypr/"
+
+# The location where Neovim expects the configuration to be.
+# This is where the sym link will be created
+target_dir="$HOME/.config/hypr"
+
+# Check if the target directory already exists then make a backup 
+if [ -d "$target_dir" ]; then
+
+    # Make a backup of the actual configuration, not the symlink
+    real_target_dir=$(realpath "$target_dir")
+    cp -r "$real_target_dir" "$backup_location"
+
+    # Remove the previous configuration
+    rm -rf "$target_dir"
+	
+fi
+
+# Create the symlink of the latest configuration
+ln -s "$source_dir" "$target_dir"
+
+echo " "
+echo "Hypland configuration installed successfully"
 echo " "
 
 #==============================================================================

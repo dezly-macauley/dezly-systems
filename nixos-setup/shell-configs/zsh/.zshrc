@@ -5,6 +5,8 @@
 alias edit-zsh="cd $HOME && nvim .zshrc"
 alias edit-alacritty="cd $HOME/.config/alacritty && nvim alacritty.toml"
 alias edit-neovim="cd $HOME/.config/nvim && nvim ."
+alias edit-hyprland="cd $HOME/.config/hypr/ && nvim hyprland.conf"
+
 #==============================================================================
 
 # SECTION: Screen Brightness
