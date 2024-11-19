@@ -1,23 +1,23 @@
 -- The leader key is the first key that you press when you want
 -- to start typing a keyboard shortcut
-require("config.leader_key_settings")
+require("settings.leader_key")
 
 -- The core settings of the Neovim Editor
-require("config.core_editor_options")
+require("settings.core_options")
 
 -------------------------------------------------------------------------------
 -- This will activate Neovim's plugin manager called `lazy.nvim`.
 --  This will load the default plugins from LazyVim, as well as your own
 --  plugins that are in the `plugins` directory (which have further been 
 --  grouped according to functionality).
-require("config.plugin_manager_settings")
+require("settings.plugin_manager")
 
 -------------------------------------------------------------------------------
 -- SECTION: Custom Keyboard Shortcuts
 
 -- This will load keyboard shortcuts from the file:
 -- `./lua/config/keyboard_shortcuts.lua`
-require("config.keyboard_shortcuts")
+require("settings.keyboard_shortcuts")
 
 -------------------------------------------------------------------------------
 --- SECTION: Automatic Code / Text Formating
