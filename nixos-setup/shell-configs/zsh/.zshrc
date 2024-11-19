@@ -6,9 +6,55 @@ alias edit-zsh="cd $HOME && nvim .zshrc"
 alias edit-alacritty="cd $HOME/.config/alacritty && nvim alacritty.toml"
 alias edit-neovim="cd $HOME/.config/nvim && nvim ."
 alias edit-hyprland="cd $HOME/.config/hypr/ && nvim hyprland.conf"
+alias edit-nixos="cd $HOME/dezly-system-setups/nixos-setup/nixos-config/\
+&& nvim configuration.nix"
 
 #==============================================================================
+# SECTION: NixOS Maintanance
 
+alias nixos-channel-update="sudo nix-channel --update"
+
+alias nixos-tidy="sudo nix-collect-garbage --delete-older-than 3d"
+
+rebuild_nixos_config() {
+    latest_nixos_config="$HOME/dezly-system-setups/nixos-setup/nixos-config"
+
+    # Delete the nixos directory
+    sudo rm -rf /etc/nixos/*
+
+    # Generate a new nixos directory
+    sudo nixos-generate-config
+
+    # Delete the `configuration.nix` file in that directory
+    sudo rm /etc/nixos/configuration.nix
+
+    # Copy everything inside the latest_nixos_config to `/etc/nixos`
+    sudo cp -r $latest_nixos_config/* /etc/nixos/
+
+    # Rebuild the system
+    sudo nixos-rebuild switch
+}
+
+rebuild_and_upgrade_nixos_config() {
+    latest_nixos_config="$HOME/dezly-system-setups/nixos-setup/nixos-config"
+
+    # Delete the nixos directory
+    sudo rm -rf /etc/nixos/*
+
+    # Generate a new nixos directory
+    sudo nixos-generate-config
+
+    # Delete the `configuration.nix` file in that directory
+    sudo rm /etc/nixos/configuration.nix
+
+    # Copy everything inside the latest_nixos_config to `/etc/nixos`
+    sudo cp -r $latest_nixos_config/* /etc/nixos/
+
+    # Rebuild the system
+    sudo nixos-rebuild switch --upgrade
+}
+
+#==============================================================================
 # SECTION: Screen Brightness
 
 # Controls the brightness of your screen
@@ -21,12 +67,19 @@ alias bright-high="brightnessctl set 75%"
 alias bright-max="brightnessctl set 100%"
 
 #==============================================================================
-
 # SECTION: Internet Management
 alias wifi-on="nmcli radio wifi on"
 alias flight-mode="nmcli radio all off"
-#==============================================================================
 
+#==============================================================================
+# SECTION: Zsh commands
+
+alias zsh-clear-history="cat /dev/null > ~/.zsh_history\
+&& rm -f ~/.zsh_history && touch ~/.zsh_history && exec zsh"
+
+alias zsh-reload="exec zsh"
+
+#==============================================================================
 # SECTION: Terminal Outputs 
 
 # NOTE: Required Package: tree, acpi
@@ -37,7 +90,6 @@ alias ls-tree="tree --gitignore"
 
 alias battery="acpi"
 #==============================================================================
-
 # SECTION: Appearance
 
 # NOTE: Required Packages: lsd (and any nerd font), bat, starship
@@ -55,4 +107,5 @@ alias zellij="zellij --layout disable-status-bar"
 # paths and other configurations have been loaded first
 
 eval "$(starship init zsh)"
+
 #==============================================================================

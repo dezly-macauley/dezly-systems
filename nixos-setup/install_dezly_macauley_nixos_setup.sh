@@ -153,13 +153,13 @@ echo " "
 
 #==============================================================================
 
-			    # SECTION: Code Editor (LazyVim)
+                # SECTION: Desktop Environment ( Hyprland )
 
-# The location of the latest LazyVim configuration
+# The location of the latest Hyprland configuration
 source_dir="$full_repo_path/desktop-environment/hyprland/hypr/"
 
-# The location where Neovim expects the configuration to be.
-# This is where the sym link will be created
+# The location where Hyprland expects the configuration to be.
+# This is where the sym link will be create
 target_dir="$HOME/.config/hypr"
 
 # Check if the target directory already exists then make a backup 
@@ -179,6 +179,5 @@ ln -s "$source_dir" "$target_dir"
 
 echo " "
 echo "Hypland configuration installed successfully"
-echo " "
 
 #==============================================================================

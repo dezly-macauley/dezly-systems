@@ -89,6 +89,9 @@
             # for programmers and writers
             unstable.neovim 
 
+            # Language server for working with markdown (.md files)
+            marksman
+
         #______________________________________________________________________
 
             # SUB_SECTION: Neovim Requirements

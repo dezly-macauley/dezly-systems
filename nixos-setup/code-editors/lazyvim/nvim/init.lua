@@ -48,3 +48,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 -------------------------------------------------------------------------------
+-- SECTION: Change the color of the CursorLine
+
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#22002b' })
+
+-------------------------------------------------------------------------------
