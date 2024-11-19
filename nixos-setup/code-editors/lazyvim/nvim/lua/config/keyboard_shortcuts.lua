@@ -5,7 +5,7 @@
 -- Automatic (space + l) - Bring up the LazyVim menu. Press U to update plugins_required
 
 -------------------------------------------------------------------------------
--- SECTION: Local Variables (To neaten up this file)
+-- SECTION: Local Variables
 
 local kms = vim.keymap.set
 local nrs = { noremap = true, silent = true }

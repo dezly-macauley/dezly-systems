@@ -19,8 +19,59 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
-    { import = "plugins.editor-theme" },
+    ---------------------------------------------------------------------------
+    -- SECTION: Custom Plugins
+    { import = "plugins.user-interface"},
     { import = "plugins.file-navigation" },
+
+    ---------------------------------------------------------------------------
+    -- SECTION: Language Support
+
+    ---------------------------------------------------------------------------
+        -- SUB_SECTION: Low-Level Systems Programming
+
+        -- Rust
+        { import = "lazyvim.plugins.extras.lang.rust" },
+
+    ---------------------------------------------------------------------------
+        -- SUB_SECTION: Database Management / Data Serialization
+
+        -- SQL
+        { import = "lazyvim.plugins.extras.lang.sql" },
+
+        -- JSON
+        { import = "lazyvim.plugins.extras.lang.json" },
+        
+        -- TOML
+        { import = "lazyvim.plugins.extras.lang.toml" },
+
+    ---------------------------------------------------------------------------
+
+    -- SUB_SECTION: Back-End Development
+
+        -- Go
+        { import = "lazyvim.plugins.extras.lang.go" },
+
+        -- Python
+        { import = "lazyvim.plugins.extras.lang.python" },
+
+        -- PHP
+        { import = "lazyvim.plugins.extras.lang.php" },
+
+    ---------------------------------------------------------------------------
+        -- SUB_SECTION: Front-End Development
+
+        { import = "lazyvim.plugins.extras.lang.typescript" },
+        { import = "lazyvim.plugins.extras.lang.svelte" },
+
+    ---------------------------------------------------------------------------
+
+        -- SUB_SECTION: Documentation
+
+        -- Markdown
+        { import = "lazyvim.plugins.extras.lang.markdown" },
+
+    ---------------------------------------------------------------------------
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

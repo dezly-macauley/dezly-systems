@@ -3,16 +3,48 @@
 require("config.leader_key_settings")
 
 -- The core settings of the Neovim Editor
-require("config.options")
+require("config.core_editor_options")
 
--- bootstrap lazy.nvim, LazyVim and your plugins
--- This will activate Neovim's plugin manager called "lazy.nvim.
---  This will load the default plugind from LazyVim, as well as your own
---  plugins that are in the `plugins` directory, and then further grouped
---  by functionality
-require("config.lazy")
+-------------------------------------------------------------------------------
+-- This will activate Neovim's plugin manager called `lazy.nvim`.
+--  This will load the default plugins from LazyVim, as well as your own
+--  plugins that are in the `plugins` directory (which have further been 
+--  grouped according to functionality).
+require("config.plugin_manager_settings")
 
--- Your custom keyboard shortcuts
+-------------------------------------------------------------------------------
+-- SECTION: Custom Keyboard Shortcuts
+
+-- This will load keyboard shortcuts from the file:
+-- `./lua/config/keyboard_shortcuts.lua`
 require("config.keyboard_shortcuts")
+
+-------------------------------------------------------------------------------
+--- SECTION: Automatic Code / Text Formating
+
+-- Disable LazyVim's auto format on save
+-- This option is placed at the end of the configuration to ensure that 
+-- nothing else overwrites its effect.
+vim.g.autoformat = false
+
+-------------------------------------------------------------------------------
+--- SECTION: Hide Markings for Invible Characters
+
+-- Do not show invisible characters like tabs and spaces
+vim.opt.list = false
+-------------------------------------------------------------------------------
+--- SECTION: Indentation
+
+-- When you press the `Tab` key in insert mode,
+-- instead of inserting one single Tab character,
+-- Neovim will insert a number of spaces.
+-- This will make your indentation more predictable
+vim.opt.expandtab = true
+
+-- Four-Space indentation
+-- Pressing `Tab` is the same as pressing space 4 times
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 -------------------------------------------------------------------------------
