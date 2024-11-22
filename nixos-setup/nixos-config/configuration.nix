@@ -136,6 +136,7 @@
 
         # SUB_SECTION: Database Languages
         # ./database-systems/postgresql.nix
+        ./database-systems/mysql.nix
 
         # SUB_SECTION: Programming Languages
         ./programming-languages/rust.nix

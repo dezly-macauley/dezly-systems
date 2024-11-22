@@ -90,6 +90,12 @@ alias ls-tree="tree --gitignore"
 
 alias battery="acpi"
 #==============================================================================
+# SECTION: Training Labs
+
+alias lab-html="cd /home/dezly-macauley/dezly-training-labs/\
+html/vanilla-html/"
+
+#==============================================================================
 # SECTION: Appearance
 
 # NOTE: Required Packages: lsd (and any nerd font), bat, starship
