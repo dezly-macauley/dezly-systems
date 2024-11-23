@@ -81,6 +81,11 @@ alias zsh-clear-history="cat /dev/null > ~/.zsh_history\
 
 alias zsh-reload="exec zsh"
 
+disable_history() {
+    unset HISTFILE
+    export HISTSIZE=0
+}
+
 #==============================================================================
 # SECTION: Terminal Outputs 
 
