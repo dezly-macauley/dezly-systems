@@ -23,7 +23,7 @@
         # with MySQL databases.
         # Unlike `mysql` (the default cli tool that MySQL comes with),
         # `MyCLI` has autocompletion and syntax highlighting.
-        pgcli
+        mycli
 
     ];
 

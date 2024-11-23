@@ -59,7 +59,7 @@ require("lazy").setup({
 
         -- SUB_SECTION: Documentation
 
-        { import = "lazyvim.plugins.extras.lang.markdown" },
+        -- { import = "lazyvim.plugins.extras.lang.markdown" },
 
     ---------------------------------------------------------------------------
     },

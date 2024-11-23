@@ -12,6 +12,8 @@ alias edit-nixos="cd $HOME/dezly-system-setups/nixos-setup/nixos-config/\
 #==============================================================================
 # SECTION: NixOS Maintanance
 
+alias os="cd /home/dezly-macauley/dezly-system-setups/"
+
 alias nixos-channel-update="sudo nix-channel --update"
 
 alias nixos-tidy="sudo nix-collect-garbage --delete-older-than 3d"
@@ -94,6 +96,9 @@ alias battery="acpi"
 
 alias lab-html="cd /home/dezly-macauley/dezly-training-labs/\
 html/vanilla-html/"
+
+alias lab-mysql="cd /home/dezly-macauley/dezly-training-labs/\
+database-management/mysql/"
 
 #==============================================================================
 # SECTION: Appearance
