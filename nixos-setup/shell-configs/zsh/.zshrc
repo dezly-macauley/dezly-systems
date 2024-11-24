@@ -76,12 +76,16 @@ alias flight-mode="nmcli radio all off"
 #==============================================================================
 # SECTION: Zsh commands
 
-alias zsh-clear-history="cat /dev/null > ~/.zsh_history\
-&& rm -f ~/.zsh_history && touch ~/.zsh_history && exec zsh"
+alias reload-shell="exec zsh"
 
-alias zsh-reload="exec zsh"
+clear_shell_history() {
+    cat /dev/null > ~/.zsh_history && \
+    rm -f ~/.zsh_history && \
+    touch ~/.zsh_history && \
+    exec zsh
+}
 
-disable_history() {
+disable_shell_history() {
     unset HISTFILE
     export HISTSIZE=0
 }
