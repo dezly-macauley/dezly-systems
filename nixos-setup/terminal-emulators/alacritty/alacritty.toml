@@ -5,6 +5,9 @@ import = [
 [cursor.style]
     shape = "Underline"
 
+# [cursor.vi_mode_style]
+#     shape = "Block"
+
 [cursor]
     thickness = 0.25
 

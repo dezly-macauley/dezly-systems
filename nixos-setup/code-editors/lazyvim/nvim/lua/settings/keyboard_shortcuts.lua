@@ -58,6 +58,14 @@ kms("n", "<Tab>", ":bn<CR>", {
   desc = "Switch to the next open file",
 })
 
+
+kms("n", "<C-n>", ":bn<CR>", {
+  noremap = true,
+  silent = true,
+  desc = "Switch to the next open file",
+})
+
+
 -------------------------------------------------------------------------------
 
 -- Close the current file
