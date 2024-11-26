@@ -109,6 +109,19 @@ html/vanilla-html/"
 alias lab-mysql="cd /home/dezly-macauley/dezly-training-labs/\
 database-management/mysql/"
 
+alias lab-react-ts="cd /home/dezly-macauley/dezly-training-labs/\
+front-end-development/react-typescript/"
+
+#==============================================================================
+# SECTION: Additional Paths
+
+# NOTE: This will allow you to install npm packages locally.
+# But first run this command:
+# npm set prefix ~/.npm-global
+
+# Now you can use the `npm install -g name_of_package` you want to install.
+export PATH=$HOME/.npm-global/bin:$PATH
+
 #==============================================================================
 # SECTION: Appearance
 
