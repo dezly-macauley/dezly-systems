@@ -103,14 +103,26 @@ alias battery="acpi"
 #==============================================================================
 # SECTION: Training Labs
 
-alias lab-html="cd /home/dezly-macauley/dezly-training-labs/\
-html/vanilla-html/"
+alias lab="cd /home/dezly-macauley/dezly-training-labs/"
+
+#______________________________________________________________________________
 
 alias lab-mysql="cd /home/dezly-macauley/dezly-training-labs/\
-database-management/mysql/"
+database-management/mysql/ && zellij"
 
-alias lab-react-ts="cd /home/dezly-macauley/dezly-training-labs/\
-front-end-development/react-typescript/"
+#______________________________________________________________________________
+
+alias lab-vanillia-html-css="cd /home/dezly-macauley/dezly-training-labs/\
+front-end-development/html-css/vanilla-html-css/ && zellij"
+
+alias lab-vanillia-typescript="cd /home/dezly-macauley/dezly-training-labs/\
+front-end-development/typescript/vanilla-typescript/ && zellij"
+
+alias lab-react-typescript="cd /home/dezly-macauley/dezly-training-labs/\
+front-end-development/typescript/react-typescript/ && zellij"
+
+alias lab-svelte-typescript="cd /home/dezly-macauley/dezly-training-labs/\
+front-end-development/typescript/svelte-typescript/ && zellij"
 
 #==============================================================================
 # SECTION: Additional Paths
