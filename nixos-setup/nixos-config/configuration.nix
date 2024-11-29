@@ -86,10 +86,10 @@
 
     xdg.mime.enable = true;
     xdg.mime.defaultApplications = {
-        "x-scheme-handler/http" = [ "mullvad-browser.desktop" ];
-        "x-scheme-handler/https" = [ "mullvad-browser.desktop" ];
-        "text/html" = [ "mullvad-browser.desktop" ];
-        "application/pdf" = [ "mullvad-browser.desktop" ];
+        "x-scheme-handler/http" = [ "firefox.desktop" ];
+        "x-scheme-handler/https" = [ "firefox.desktop" ];
+        "text/html" = [ "firefox.desktop" ];
+        "application/pdf" = [ "firefox.desktop" ];
     };
 
 #______________________________________________________________________________
@@ -176,6 +176,7 @@
         # SUB_SECTION: Web Browsers
 
         mullvad-browser
+        firefox
 
 #_____________________________________________________________________________
 
