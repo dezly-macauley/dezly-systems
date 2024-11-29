@@ -78,8 +78,7 @@
 
             # SUB_SECTION: VS Code (GUI Code Editor)
 
-            unstable.vscode-fhs 
-            
+            unstable.vscodium-fhs 
         #______________________________________________________________________
 
             # SUB_SECTION: Neovim Text / Code Editor

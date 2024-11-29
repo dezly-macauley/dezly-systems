@@ -101,6 +101,26 @@ alias ls-tree="tree --gitignore"
 
 alias battery="acpi"
 #==============================================================================
+# SECTION: Dezly Dojo
+
+dezly-dojos() {
+
+    if [[ $# -eq 0 ]]; then
+        cd ~/dezly-dojos
+
+    elif [[ $1 == "--rust" ]]; then
+        cd ~/dezly-dojos/rust-dojo
+
+    elif [[ $1 == "--svelte" ]]; then
+        cd ~/dezly-dojos/svelte-dojo
+
+    else
+        echo "Error: $1 is not a valid dojo."
+        echo "Valid dojos: --rust, --svelte"
+    fi
+}
+
+#==============================================================================
 # SECTION: Training Labs
 
 alias lab="cd /home/dezly-macauley/dezly-training-labs/"

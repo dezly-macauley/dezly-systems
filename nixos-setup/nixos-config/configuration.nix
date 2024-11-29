@@ -77,7 +77,7 @@
 
     networking.hostName = "nixos";
 
-    # Enable networking using a program calle network manager
+    # Enable networking using a program called network manager
     networking.networkmanager.enable = true;
 
 #______________________________________________________________________________
@@ -86,10 +86,10 @@
 
     xdg.mime.enable = true;
     xdg.mime.defaultApplications = {
-        "x-scheme-handler/http" = [ "google-chrome-stable.desktop" ];
-        "x-scheme-handler/https" = [ "google-chrome-stable.desktop" ];
-        "text/html" = [ "google-chrome-stable.desktop" ];
-        "application/pdf" = [ "google-chrome-stable.desktop" ];
+        "x-scheme-handler/http" = [ "mullvad-browser.desktop" ];
+        "x-scheme-handler/https" = [ "mullvad-browser.desktop" ];
+        "text/html" = [ "mullvad-browser.desktop" ];
+        "application/pdf" = [ "mullvad-browser.desktop" ];
     };
 
 #______________________________________________________________________________
@@ -173,10 +173,9 @@
 
     environment.systemPackages = with pkgs; [
 #_____________________________________________________________________________
-
         # SUB_SECTION: Web Browsers
 
-        google-chrome
+        mullvad-browser
 
 #_____________________________________________________________________________
 
