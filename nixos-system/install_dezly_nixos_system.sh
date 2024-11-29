@@ -134,10 +134,10 @@ echo " "
 
 #==============================================================================
 
-			    # SECTION: Code Editor (LazyVim)
+			    # SECTION: Code Editor (Neovim)
 
 # The location of the latest LazyVim configuration
-source_dir="$full_repo_path/code-editors/lazyvim/nvim/"
+source_dir="$full_repo_path/code-editors/neovim/nvim/"
 
 # The location where Neovim expects the configuration to be.
 # This is where the sym link will be created
@@ -152,7 +152,7 @@ if [ -d "$target_dir" ]; then
 
     # Remove the previous configuration
     rm -rf "$target_dir"
-	
+
     # Clear the local cache (temp files stored in memory), 
     # and uninstall any plugins to ensure that there are no issues
     # and conflicts from a previous installation
@@ -166,7 +166,7 @@ fi
 ln -s "$source_dir" "$target_dir"
 
 echo " "
-echo "LazyVim configuration installed successfully"
+echo "Neovim configuration installed successfully"
 echo " "
 
 #==============================================================================

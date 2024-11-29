@@ -6,13 +6,13 @@ alias edit-zsh="cd $HOME && nvim .zshrc"
 alias edit-alacritty="cd $HOME/.config/alacritty && nvim alacritty.toml"
 alias edit-neovim="cd $HOME/.config/nvim && nvim ."
 alias edit-hyprland="cd $HOME/.config/hypr/ && nvim hyprland.conf"
-alias edit-nixos="cd $HOME/dezly-system-setups/nixos-setup/nixos-config/\
+alias edit-nixos="cd $HOME/dezly-systems/nixos-system/nixos-config/\
 && nvim configuration.nix"
 
 #==============================================================================
 # SECTION: NixOS Maintanance
 
-alias os="cd /home/dezly-macauley/dezly-system-setups/"
+alias os="cd /home/dezly-macauley/dezly-systems"
 
 alias nixos-channel-update="sudo nix-channel --update"
 
@@ -111,12 +111,34 @@ dezly-dojos() {
     elif [[ $1 == "--rust" ]]; then
         cd ~/dezly-dojos/rust-dojo
 
+    elif [[ $1 == "--go" ]]; then
+        cd ~/dezly-dojos/rust-dojo
+
+    elif [[ $1 == "--python" ]]; then
+        cd ~/dezly-dojos/rust-dojo
+
+    elif [[ $1 == "--solidity" ]]; then
+        cd ~/dezly-dojos/rust-dojo
+
     elif [[ $1 == "--svelte" ]]; then
         cd ~/dezly-dojos/svelte-dojo
 
+    elif [[ $1 == "--typescript" ]]; then
+        cd ~/dezly-dojos/typescript-dojo
+
+    elif [[ $1 == "--tailwindcss" ]]; then
+        cd ~/dezly-dojos/typescript-dojo
+
     else
         echo "Error: $1 is not a valid dojo."
-        echo "Valid dojos: --rust, --svelte"
+        echo "
+        Valid dojos:
+        --rust, 
+        --go, --python,
+        --solidity,
+        --mysql, --postgresql, --sqlite,
+        --svelte, --typescript, --tailwindcss
+        "
     fi
 }
 
