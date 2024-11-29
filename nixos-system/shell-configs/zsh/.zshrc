@@ -19,7 +19,7 @@ alias nixos-channel-update="sudo nix-channel --update"
 alias nixos-tidy="sudo nix-collect-garbage --delete-older-than 3d"
 
 rebuild_nixos_config() {
-    latest_nixos_config="$HOME/dezly-system-setups/nixos-setup/nixos-config"
+    latest_nixos_config="$HOME/dezly-systems/nixos-system/nixos-config"
 
     # Delete the nixos directory
     sudo rm -rf /etc/nixos/*
@@ -38,7 +38,7 @@ rebuild_nixos_config() {
 }
 
 rebuild_and_upgrade_nixos_config() {
-    latest_nixos_config="$HOME/dezly-system-setups/nixos-setup/nixos-config"
+    latest_nixos_config="$HOME/dezly-systems/nixos-system/nixos-config"
 
     # Delete the nixos directory
     sudo rm -rf /etc/nixos/*

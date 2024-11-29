@@ -8,10 +8,10 @@
 
 # To make this script executable, first navigate to the location where this 
 # script is and then run the following command:
-# chmod +x install_dezly_macauley_nixos_setup.sh
+# chmod +x install_dezly_nixos_system.sh
 # ---------------------------------------------------------------------------
 # Then run the file with this command:
-# source install_dezly_macauley_nixos_setup
+# source install_dezly_nixos_system.sh
 
 #==============================================================================
 
@@ -26,9 +26,9 @@
 parent_path="$HOME"
 
 # Leave this the same unless you renamed the repo
-repo_name="dezly-system-setups"
+repo_name="dezly-systems"
 
-full_repo_path="$parent_path/$repo_name/nixos-setup"
+full_repo_path="$parent_path/$repo_name/nixos-system"
 
 #______________________________________________________________________________
 
@@ -68,7 +68,7 @@ echo " "
 
 #==============================================================================
 
-                            # SECTION: Shell Settings ( ZSH )
+                            # SECTION: Shell Configuration ( ZSH )
 
 # Backup the previous configuration
 cd $HOME
@@ -82,6 +82,24 @@ ln -sf "$full_repo_path/shell-configs/zsh/.zshrc" "$HOME/.zshrc"
 
 echo " "
 echo "Zsh configuration installed successfully"
+echo " "
+
+#==============================================================================
+
+                            # SECTION: Version Control (Git)
+
+# Backup the previous configuration
+cd $HOME
+sudo cp .gitconfig $backup_location
+
+# Delete the current configuration
+sudo rm .gitconfig
+
+# Create a sym link of the current configuration
+ln -sf "$full_repo_path/version-control/git/.gitconfig" "$HOME/.gitconfig"
+
+echo " "
+echo "Git configuration installed successfully"
 echo " "
 
 #==============================================================================
