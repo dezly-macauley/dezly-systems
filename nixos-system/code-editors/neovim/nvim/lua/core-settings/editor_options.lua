@@ -25,6 +25,8 @@ vim.schedule(
 
 -- Searches will not be case sensitive
 vim.opt.ignorecase = true
+
+
 -- Searches will become case sensitve when the first word of your search,
 -- starts with a capital letter.
 vim.opt.smartcase = true

@@ -1,6 +1,15 @@
 local keymap = vim.keymap.set
 
 -------------------------------------------------------------------------------
+
+keymap(
+    "n", 
+    "<Esc>",
+    "<cmd>nohlsearch<CR>",
+    { desc = "Turns off the highlighting when you are done searching" }
+)
+
+-------------------------------------------------------------------------------
 -- SECTION: Terminal
 
 keymap(
@@ -23,7 +32,11 @@ keymap(
 )
 
 -------------------------------------------------------------------------------
+-- Error handling
 
+keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-------------------------------------------------------------------------------
 -- Window Navigation
 
 keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })

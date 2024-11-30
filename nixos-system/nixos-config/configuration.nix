@@ -194,6 +194,8 @@
         # autocompletion, and command history
         litecli
 
+        vscode-langservers-extracted
+
         # SECTION: Document Creation
 
         libreoffice # A collection of document creation programs

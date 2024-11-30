@@ -1,7 +1,7 @@
-require("leader_key_settings")
-require("editor_options")
-require("plugin_manager_settings")
-require("custom_shortcuts")
+require("core-settings.leader_key")
+require("core-settings.editor_options")
+require("core-settings.plugin_manager")
+require("core-settings.custom_keymaps")
 
 -------------------------------------------------------------------------------
 -- SECTION: Cursorline Colour

@@ -14,9 +14,9 @@ require("lazy").setup({
   -- that contain plugin files
   spec = {
     -- import/override with your plugins
-    { import = "plugins.navigation" },
-    { import = "plugins.appearance" },
-    { import = "plugins.coding" },
+    { import = "plugin-settings.navigation" },
+    { import = "plugin-settings.appearance" },
+    { import = "plugin-settings.coding" },
   },
 
 })
