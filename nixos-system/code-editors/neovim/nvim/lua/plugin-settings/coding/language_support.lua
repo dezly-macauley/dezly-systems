@@ -29,9 +29,9 @@ return {
             lsp.intelephense.setup({}) -- PHP
         
             -------------------------------------------------------------------
-          
+        
             -- Smart Contract Development
-            
+        
             lsp.solidity_ls.setup({}) -- Solidity
 
             -- npm install -g @vscode-solidity-server
@@ -40,6 +40,11 @@ return {
 
             -------------------------------------------------------------------
             -- Front-End Development
+            
+            -- Do not install the language servers via configuration.nix,
+            -- just download directly from npm
+            -- npm install -g svelte-language-server
+
             lsp.svelte.setup({}) -- Svelte
 
             -- npm install -g @vtsls/language-server

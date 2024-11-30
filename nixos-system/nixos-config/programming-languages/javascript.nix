@@ -18,7 +18,7 @@
             deno
 
             # Language support for the Svelte Framework
-            nodePackages.svelte-language-server
+            # nodePackages.svelte-language-server
 
         ];
 
