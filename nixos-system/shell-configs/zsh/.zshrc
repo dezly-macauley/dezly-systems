@@ -109,25 +109,25 @@ dezly-dojos() {
         cd ~/dezly-dojos
 
     elif [[ $1 == "--rust" ]]; then
-        cd ~/dezly-dojos/rust-dojo
+        cd ~/dezly-dojos/rust-dojo && zellij
 
     elif [[ $1 == "--go" ]]; then
-        cd ~/dezly-dojos/rust-dojo
+        cd ~/dezly-dojos/rust-dojo && zellij
 
     elif [[ $1 == "--python" ]]; then
-        cd ~/dezly-dojos/rust-dojo
+        cd ~/dezly-dojos/rust-dojo && zellij
 
     elif [[ $1 == "--solidity" ]]; then
-        cd ~/dezly-dojos/rust-dojo
+        cd ~/dezly-dojos/rust-dojo && zellij
 
     elif [[ $1 == "--svelte" ]]; then
-        cd ~/dezly-dojos/svelte-dojo
+        cd ~/dezly-dojos/svelte-dojo && zellij
 
     elif [[ $1 == "--typescript" ]]; then
-        cd ~/dezly-dojos/typescript-dojo
+        cd ~/dezly-dojos/typescript-dojo && zellij
 
     elif [[ $1 == "--tailwindcss" ]]; then
-        cd ~/dezly-dojos/typescript-dojo
+        cd ~/dezly-dojos/typescript-dojo && zellij
 
     else
         echo "Error: $1 is not a valid dojo."
