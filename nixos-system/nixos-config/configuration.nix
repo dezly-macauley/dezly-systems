@@ -102,9 +102,9 @@
 	    syntaxHighlighting.enable = true;
     };
 
-    programs.bash = {
-        enableCompletion = true;
-    };
+    # programs.bash = {
+    #     completion = true;
+    # };
 
     users.defaultUserShell = pkgs.bash;
 
@@ -351,6 +351,6 @@ imagemagick # Converting image formats. Removing screenshot outline
 
   };
 
-    system.stateVersion = "24.05";
+    system.stateVersion = "24.11";
 
 }

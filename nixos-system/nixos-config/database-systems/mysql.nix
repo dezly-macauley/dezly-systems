@@ -8,7 +8,7 @@
 
         # This will set the version of MariaDB to version 110
         # MariaDB is a drop-in replacement for MySQL
-        package = pkgs.mariadb_110;
+        package = pkgs.mariadb;
 
         # This will ensure that the service is running in the background
         enable = true;

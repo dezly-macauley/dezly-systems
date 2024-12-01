@@ -37,7 +37,7 @@ rebuild_nixos_config() {
     sudo nixos-rebuild switch
 }
 
-rebuild_and_upgrade_nixos_config() {
+rebuild_nixos_config_and_upgrade() {
     latest_nixos_config="$HOME/dezly-systems/nixos-system/nixos-config"
 
     # Delete the nixos directory

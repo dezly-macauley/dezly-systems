@@ -1,12 +1,10 @@
-import = [
-"~/.config/alacritty/aura_theme.toml",
-]
+[general]
+    import = [
+        "~/.config/alacritty/aura_theme.toml",
+    ]
 
 [cursor.style]
     shape = "Underline"
-
-# [cursor.vi_mode_style]
-#     shape = "Block"
 
 [cursor]
     thickness = 0.25
