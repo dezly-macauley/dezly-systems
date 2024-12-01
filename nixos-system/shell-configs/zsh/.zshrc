@@ -12,7 +12,7 @@ alias edit-nixos="cd $HOME/dezly-systems/nixos-system/nixos-config/\
 #==============================================================================
 # SECTION: NixOS Maintanance
 
-alias os="cd /home/dezly-macauley/dezly-systems"
+alias dezly-systems="cd /home/dezly-macauley/dezly-systems"
 
 alias nixos-channel-update="sudo nix-channel --update"
 
@@ -103,68 +103,31 @@ alias battery="acpi"
 #==============================================================================
 # SECTION: Dezly Dojo
 
+# `eval zellij` is used because I want it to run zellij as if I had typed
+# it from the command line and use:
+# alias zellij="zellij --layout disable-status-bar"
+# instead of just the zellij program.
+
 dezly-dojos() {
 
     if [[ $# -eq 0 ]]; then
         cd ~/dezly-dojos
 
     elif [[ $1 == "--rust" ]]; then
-        cd ~/dezly-dojos/rust-dojo && zellij
-
-    elif [[ $1 == "--go" ]]; then
-        cd ~/dezly-dojos/rust-dojo && zellij
-
-    elif [[ $1 == "--python" ]]; then
-        cd ~/dezly-dojos/rust-dojo && zellij
-
-    elif [[ $1 == "--solidity" ]]; then
-        cd ~/dezly-dojos/rust-dojo && zellij
+        cd ~/dezly-dojos/rust-dojo && eval zellij
 
     elif [[ $1 == "--svelte" ]]; then
-        cd ~/dezly-dojos/svelte-dojo && zellij
-
-    elif [[ $1 == "--typescript" ]]; then
-        cd ~/dezly-dojos/typescript-dojo && zellij
-
-    elif [[ $1 == "--tailwindcss" ]]; then
-        cd ~/dezly-dojos/typescript-dojo && zellij
+        cd ~/dezly-dojos/svelte-dojo && eval zellij
 
     else
         echo "Error: $1 is not a valid dojo."
         echo "
         Valid dojos:
-        --rust, 
-        --go, --python,
-        --solidity,
-        --mysql, --postgresql, --sqlite,
-        --svelte, --typescript, --tailwindcss
+        --rust
+        --svelte
         "
     fi
 }
-
-#==============================================================================
-# SECTION: Training Labs
-
-alias lab="cd /home/dezly-macauley/dezly-training-labs/"
-
-#______________________________________________________________________________
-
-alias lab-mysql="cd /home/dezly-macauley/dezly-training-labs/\
-database-management/mysql/ && zellij"
-
-#______________________________________________________________________________
-
-alias lab-vanillia-html-css="cd /home/dezly-macauley/dezly-training-labs/\
-front-end-development/html-css/vanilla-html-css/ && zellij"
-
-alias lab-vanillia-typescript="cd /home/dezly-macauley/dezly-training-labs/\
-front-end-development/typescript/vanilla-typescript/ && zellij"
-
-alias lab-react-typescript="cd /home/dezly-macauley/dezly-training-labs/\
-front-end-development/typescript/react-typescript/ && zellij"
-
-alias lab-svelte-typescript="cd /home/dezly-macauley/dezly-training-labs/\
-front-end-development/typescript/svelte-typescript/ && zellij"
 
 #==============================================================================
 # SECTION: Additional Paths
