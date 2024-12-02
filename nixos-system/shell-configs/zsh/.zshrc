@@ -118,6 +118,9 @@ dezly-dojos() {
 
     elif [[ $1 == "--svelte" ]]; then
         cd ~/dezly-dojos/svelte-dojo && eval zellij
+    
+    elif [[ $1 == "--typescript" ]]; then
+        cd ~/dezly-dojos/typescript-dojo && eval zellij
 
     else
         echo "Error: $1 is not a valid dojo."

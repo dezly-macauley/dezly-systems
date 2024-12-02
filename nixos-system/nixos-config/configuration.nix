@@ -102,9 +102,8 @@
 	    syntaxHighlighting.enable = true;
     };
 
-    # programs.bash = {
-    #     completion = true;
-    # };
+
+    programs.bash.completion.enable = true;
 
     users.defaultUserShell = pkgs.bash;
 
@@ -133,6 +132,7 @@
         ./core-settings/power_optimisation.nix
         ./core-settings/time_zone_and_locale.nix
         ./core-settings/code_editor_setups.nix
+        ./core-settings/virtual_machine_emulation.nix
 
         # SUB_SECTION: Database Languages
         # ./database-systems/postgresql.nix

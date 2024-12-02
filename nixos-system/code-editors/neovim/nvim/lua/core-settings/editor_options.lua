@@ -19,6 +19,11 @@ vim.schedule(
 -- is ready and Neovim is idle.
 
 --=============================================================================
+-- SECTION: Swap Files
+
+-- I don't really need this.
+-- Also the swapfile warning is annoying
+vim.opt.swapfile = false
 
 -------------------------------------------------------------------------------
 -- SECTION: Search Functionality

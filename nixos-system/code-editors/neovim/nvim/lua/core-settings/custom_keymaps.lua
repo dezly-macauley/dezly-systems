@@ -3,7 +3,7 @@ local keymap = vim.keymap.set
 -------------------------------------------------------------------------------
 
 keymap(
-    "n", 
+    "n",
     "<Esc>",
     "<cmd>nohlsearch<CR>",
     { desc = "Turns off the highlighting when you are done searching" }
@@ -13,22 +13,22 @@ keymap(
 -- SECTION: Terminal
 
 keymap(
-    "n", 
-    "<leader>t", 
-    ":split<CR>:terminal<CR>:setlocal nonumber norelativenumber<CR>i", 
-    { desc = "[t]erminal" }
+    "n",
+    "<leader>t",
+    -- This will open the terminal without any line numbers
+    ":split<CR>:terminal<CR>:setlocal nonumber norelativenumber<CR>i",
+    { desc = "Open the [t]erminal and switch to insert mode" }
 )
 
-
--- Alt+j | Normal Mode Return
+-- Alt + e
 -- Switch back to `Normal Mode` when using the `Terminal Mode`,
 -- and then go back to the screen that has your code.
--- Press `Alt j`
+-- Press `Alt t`
 keymap(
     "t", 
-    "<M-j>", 
+    "<M-e>", 
     "<C-\\><C-n><C-w>w", 
-    { desc = "[J]ump out of the current terminal and back to your code" }
+    { desc = "[e]xit the terminal and return to your code" }
 )
 
 -------------------------------------------------------------------------------
@@ -46,8 +46,31 @@ keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -------------------------------------------------------------------------------
 
-keymap("n", "<C-n>", ":bn<CR>", { desc = "Switch to the next open file"})
+-- SECTION: File Navigation
 
+-- Ctrl + n
+keymap(
+    "n",
+    "<leader>fn",
+    ":bn<CR>",
+    { desc = "[f]ile [n]ext"}
+)
 
--- requires: oil.nvim
-vim.keymap.set("n", "<leader>fe", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- space, fc
+keymap(
+    "n",
+    "<leader>fc",
+    ":bd<CR>",
+    { desc = "[f]ile [c]lose" }
+)
+
+-- NOTE: space, fe 
+-- This keymap requires the plugin: oil.nvim
+keymap(
+    "n",
+    "<leader>fe",
+    "<CMD>Oil<CR>",
+    { desc = "[f]ile [e]xplorer - parent directory" }
+)
+
+-------------------------------------------------------------------------------
