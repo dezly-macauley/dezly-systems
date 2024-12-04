@@ -124,6 +124,9 @@ dezly-dojos() {
     
     elif [[ $1 == "--typescript" ]]; then
         cd ~/dezly-dojos/typescript-dojo && eval zellij
+    
+    elif [[ $1 == "--lua" ]]; then
+        cd ~/dezly-dojos/lua-dojo && eval zellij
 
     else
         echo "Error: $1 is not a valid dojo."
