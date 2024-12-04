@@ -59,7 +59,7 @@ return {
 
             -- To use both of these you will need to have the following
             -- package installed and available on your path.
-            --vscode-langservers-extracted
+            -- vscode-langservers-extracted
             lsp.cssls.setup({}) -- CSS
             lsp.html.setup({}) -- Html
 

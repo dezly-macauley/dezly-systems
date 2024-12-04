@@ -116,6 +116,9 @@ dezly-dojos() {
     elif [[ $1 == "--rust" ]]; then
         cd ~/dezly-dojos/rust-dojo && eval zellij
 
+    elif [[ $1 == "--cybersecurity" ]]; then
+        cd ~/dezly-dojos/cybersecurity-dojo/ && eval zellij
+
     elif [[ $1 == "--svelte" ]]; then
         cd ~/dezly-dojos/svelte-dojo && eval zellij
     

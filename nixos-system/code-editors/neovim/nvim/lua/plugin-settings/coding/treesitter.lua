@@ -16,7 +16,7 @@ return {
                 -- to install check the following
                 --[[
                     https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages
-                --]] 
+                --]]
 
                 ensure_installed = { 
                     
@@ -28,7 +28,7 @@ return {
                     "python",
 
                     -- Front-End Development
-                    "svelte", "typescript", 
+                    "svelte", "typescript", "javascript",
                     "html", "css",
 
                     -- Web3

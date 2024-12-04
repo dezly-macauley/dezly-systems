@@ -175,7 +175,6 @@
 #_____________________________________________________________________________
         # SUB_SECTION: Web Browsers
 
-        mullvad-browser
         firefox
 
 #_____________________________________________________________________________
@@ -193,8 +192,6 @@
         # litecli has quality of life improvements like syntax highlighting,
         # autocompletion, and command history
         litecli
-
-        vscode-langservers-extracted
 
         # SECTION: Document Creation
 
@@ -280,7 +277,7 @@ htmx-lsp
 # https://tailwindcss.com/blog/standalone-cli
 tailwindcss
 
-insomnia # Store, organize, and execute REST API requests
+# insomnia # Store, organize, and execute REST API requests
 
 cloc                # Counts the lines of source code 
 slither-analyzer	# Static Analyzer for Solidity and Vyper
