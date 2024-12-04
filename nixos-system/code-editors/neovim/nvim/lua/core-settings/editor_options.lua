@@ -36,6 +36,9 @@ vim.opt.ignorecase = true
 -- starts with a capital letter.
 vim.opt.smartcase = true
 
+-- I don't want the highlighting to stay on after I've finished searching
+vim.opt.hlsearch = false
+
 -------------------------------------------------------------------------------
 
 -- SECTION: Mouse Support

@@ -139,12 +139,20 @@
         ./database-systems/mysql.nix
 
         # SUB_SECTION: Programming Languages
+
+        # Low-Level Programming
         ./programming-languages/rust.nix
+
+        # Front-End Development
+        ./programming-languages/javascript.nix
+
+        # Back-End Development
         ./programming-languages/go.nix
         ./programming-languages/python.nix
         ./programming-languages/php.nix
-        ./programming-languages/javascript.nix
-            
+
+        # Scripting
+        ./programming-languages/lua.nix
     ];
 
 #______________________________________________________________________________
@@ -327,13 +335,6 @@ slurp       # Screenshots
 
 imagemagick # Converting image formats. Removing screenshot outline
 
-			lua
-
-			# Language Server
-			lua-language-server			
-
-			# Package manager
-			luajitPackages.luarocks
 
     ];
 

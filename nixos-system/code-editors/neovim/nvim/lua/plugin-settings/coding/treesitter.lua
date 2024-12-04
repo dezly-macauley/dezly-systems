@@ -44,7 +44,7 @@ return {
                     "bash", "lua", "nix",
 
                     -- Data Serialisation
-                    "toml", "gomod",
+                    "toml", "gomod", "json5"
                     
                 },
 

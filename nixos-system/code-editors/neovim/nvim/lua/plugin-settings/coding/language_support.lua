@@ -41,25 +41,28 @@ return {
             -------------------------------------------------------------------
             -- Front-End Development
             
-            -- Do not install the language servers via configuration.nix,
-            -- just download directly from npm
-            -- npm install -g svelte-language-server
-
-            lsp.svelte.setup({}) -- Svelte
-
-            -- npm install -g @vtsls/language-server
-            -- refer to the the guide in `dezly-dojos/typescript-dojo`
-            -- on how to locally install npm global packages on NixOS
-
-            lsp.vtsls.setup({}) -- TypeScript, JavaScript, React (.tsx, .jsx)
 
             -------------------------------------------------------------------
             -- User Interface Design
             lsp.tailwindcss.setup({}) -- Tailwind CSS
 
-            -- To use both of these you will need to have the following
+            -- NOTE: Do not install the language servers 
+            -- via configuration.nix
+            -- just download directly from npm
+
+            -- npm install -g svelte-language-server
+            lsp.svelte.setup({}) -- Svelte
+
+            -- npm install -g @vtsls/language-server
+            -- refer to the the guide in `dezly-dojos/typescript-dojo`
+            -- on how to locally install npm global packages on NixOS
+            lsp.vtsls.setup({}) -- TypeScript, JavaScript, React (.tsx, .jsx)        
+
+            -- To use html, cssls, and jsonls 
+            -- you will need to have the following
             -- package installed and available on your path.
             -- vscode-langservers-extracted
+            lsp.jsonls.setup({}) -- JSON
             lsp.cssls.setup({}) -- CSS
             lsp.html.setup({}) -- Html
 

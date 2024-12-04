@@ -17,6 +17,15 @@
             # It is also a language server for JavaScript and TypeScript
             deno
 
+            # NOTE: Syntax Highlighting
+
+            vimPlugins.nvim-treesitter-parsers.javascript
+            vimPlugins.nvim-treesitter-parsers.json5
+
+            vimPlugins.nvim-treesitter-parsers.typescript
+            
+            vimPlugins.nvim-treesitter-parsers.svelte
+
         ];
 
 }

@@ -145,9 +145,6 @@
 			vimPlugins.nvim-treesitter-parsers.solidity
 
             # Front-End Development
-            vimPlugins.nvim-treesitter-parsers.svelte
-            vimPlugins.nvim-treesitter-parsers.typescript
-            vimPlugins.nvim-treesitter-parsers.javascript
             vimPlugins.nvim-treesitter-parsers.css
             vimPlugins.nvim-treesitter-parsers.html
 
@@ -158,14 +155,12 @@
 			vimPlugins.nvim-treesitter-parsers.sql
 
             # Data Serialization Languages
-            vimPlugins.nvim-treesitter-parsers.json
             vimPlugins.nvim-treesitter-parsers.yaml
             vimPlugins.nvim-treesitter-parsers.toml
             vimPlugins.nvim-treesitter-parsers.gomod
 
             # Scripting Languages
             vimPlugins.nvim-treesitter-parsers.python
-            vimPlugins.nvim-treesitter-parsers.lua
 
         #______________________________________________________________________
 
