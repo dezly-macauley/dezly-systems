@@ -74,3 +74,5 @@ keymap(
 )
 
 -------------------------------------------------------------------------------
+keymap("n", "<leader>mo", ":PeekOpen<CR>")
+keymap("n", "<leader>mc", ":PeekClose<CR>")

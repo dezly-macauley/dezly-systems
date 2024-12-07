@@ -95,7 +95,8 @@ disable_shell_history() {
 
 # NOTE: Required Package: tree, acpi
 
-alias date-time='echo "⌚ $(date +"%d %B %Y ( %I:%M:%S %p )")"'
+# alias date-time='echo "⌚ $(date +"%d %B %Y ( %I:%M:%S %p )")"'
+alias date-time='echo "⌚ $(date +"%A, %d %B %Y ( %I:%M:%S %p )")"'
 
 alias ls-tree="tree --gitignore"
 
@@ -124,6 +125,9 @@ dezly-dojos() {
     
     elif [[ $1 == "--typescript" ]]; then
         cd ~/dezly-dojos/typescript-dojo && eval zellij
+    
+    elif [[ $1 == "--vyper" ]]; then
+        cd ~/dezly-dojos/vyper-dojo && eval zellij
     
     elif [[ $1 == "--lua" ]]; then
         cd ~/dezly-dojos/lua-dojo && eval zellij
