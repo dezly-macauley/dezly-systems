@@ -152,6 +152,14 @@ dezly-dojos() {
 # Now you can use the `npm install -g name_of_package` you want to install.
 export PATH=$HOME/.npm-global/bin:$PATH
 
+#______________________________________________________________________________
+
+# First make sure that you are in your home directory and then run the
+# following command:
+# uv venv
+# Now you can use the `uv pip install name-of-package` to install things
+export PATH="$HOME/.venv/bin/:$PATH"
+
 #==============================================================================
 # SECTION: Appearance
 

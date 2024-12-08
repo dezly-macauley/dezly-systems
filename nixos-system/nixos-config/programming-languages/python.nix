@@ -21,6 +21,9 @@
             # The faster Python package manager written in Rust
             uv
 
+            # Pythonic Smart Contract Language for the EVM
+            vyper
+
         ];
 
 }

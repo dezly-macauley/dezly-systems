@@ -17,6 +17,7 @@ require("lazy").setup({
     { import = "plugin-settings.navigation" },
     { import = "plugin-settings.appearance" },
     { import = "plugin-settings.coding" },
+    { import = "plugin-settings.syntax-highlighting" },
   },
 
 })
