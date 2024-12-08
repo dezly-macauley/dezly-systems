@@ -7,20 +7,6 @@ require("core-settings.custom_keymaps")
 -- SECTION: Cursorline Colour
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#22002b' })
 
-
-
-
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.vy" },
-  callback = function()
-    vim.lsp.start({
-      name = "vyper-lsp",
-      cmd = { "vyper-lsp" },
-      root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1])
-    })
-  end,
-})
-
 -------------------------------------------------------------------------------
 -- SECTION: Vyper LSP
 -- Make sure that vyper-lsp is added to your path
