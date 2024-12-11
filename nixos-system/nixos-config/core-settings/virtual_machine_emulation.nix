@@ -22,6 +22,9 @@
             # The Emulator
             qemu_full           
 
+            # A library for working with virtual machines
+            libvirt-glib
+
             # NOTE: bridge-utils is deprecated in favour of iproute2
 
             # Collection of utilities for controlling TCP/IP networking 

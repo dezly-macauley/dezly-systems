@@ -64,13 +64,18 @@ If you get a number like `16`, that means you can run virtual machines
 on your system and that you have 16 CPU cores.
 
 _______________________________________________________________________________
-
 ## Check if libvirtd is enabled after installing it
 
 ```
-sytemctl status libvirtd
+systemctl status libvirtd
 ```
 
+If it is not enabled:
+
+```
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+```
 _______________________________________________________________________________
 
 ## Create this directories
@@ -144,14 +149,20 @@ Capacity: 50 GB
 
 Choose the volume
 
-
-
 _______________________________________________________________________________
 
-You can use the command line
+### After the install reboot your system and then run these commands
+
+This is to activate the default network so that you you can connect to your 
+Virtual machine. By default this is set to inactive and only switched on
+during your installation. 
+
+You need to run these commands or you will not be able to access your virtual
+machine after rebooting.
 
 ```
-virsh -h
+sudo net-start default
+sudo net-autostart default
 ```
 
 _______________________________________________________________________________
