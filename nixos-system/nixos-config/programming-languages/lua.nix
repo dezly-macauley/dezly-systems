@@ -5,6 +5,8 @@
     # ABOUT: Lua
 
         environment.systemPackages = with pkgs; [
+            # Powerful, fast, lightweight, embeddable scripting language
+            lua
 
             # A high performance JIT compiler for Lua
             luajit
