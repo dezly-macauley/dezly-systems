@@ -114,30 +114,62 @@ dezly-dojos() {
     if [[ $# -eq 0 ]]; then
         cd ~/dezly-dojos
 
+    #__________________________________________________________________________
     elif [[ $1 == "--rust" ]]; then
         cd ~/dezly-dojos/rust-dojo && eval zellij
+    #__________________________________________________________________________
+    elif [[ $1 == "--go" ]]; then
+        cd ~/dezly-dojos/go-dojo/ && eval zellij
 
-    elif [[ $1 == "--cybersecurity" ]]; then
-        cd ~/dezly-dojos/cybersecurity-dojo/ && eval zellij
-
+    elif [[ $1 == "--python" ]]; then
+        cd ~/dezly-dojos/python-dojo/ && eval zellij
+    #__________________________________________________________________________
     elif [[ $1 == "--svelte" ]]; then
         cd ~/dezly-dojos/svelte-dojo && eval zellij
     
     elif [[ $1 == "--typescript" ]]; then
         cd ~/dezly-dojos/typescript-dojo && eval zellij
-    
+    #__________________________________________________________________________
     elif [[ $1 == "--vyper" ]]; then
         cd ~/dezly-dojos/vyper-dojo && eval zellij
-    
+    #__________________________________________________________________________
+    elif [[ $1 == "--mysql" ]]; then
+        cd ~/dezly-dojos/mysql-dojo && eval zellij
+    #__________________________________________________________________________
     elif [[ $1 == "--lua" ]]; then
         cd ~/dezly-dojos/lua-dojo && eval zellij
+    
+    elif [[ $1 == "--bash" ]]; then
+        cd ~/dezly-dojos/bash-dojo && eval zellij
+    #__________________________________________________________________________
 
     else
         echo "Error: $1 is not a valid dojo."
         echo "
         Valid dojos:
+
+        Low-Level Systems Programming:
         --rust
+
+        Back-End Development:
+        --go
+        --python
+        
+        Web3:
+        --vyper
+        --solidity
+        
+        Front-End Development:
         --svelte
+        --typescript
+        --tailwind-css
+        
+        Database Management:
+        --mysql
+        
+        Scripting:
+        --lua
+        --bash
         "
     fi
 }

@@ -24,12 +24,42 @@ sudo apt full-upgrade -y
 _______________________________________________________________________________
 ### Install Programs
 
+How to search for a package in Kali
+
+```
+sudo apt search name-of-your-package
+```
+
+_______________________________________________________________________________
+
+### How to install a package in Kali
+
+There are two ways
+
+Method 1: This is for interactive package installs (manually entering the
+commands in the terminal).
+This has some visual stuff like a progress bar. 
+```
+sudo apt install name-of-your-package
+```
+
+Method 2: This does the same thing but it is better suited when you want
+to add this command as part of a bash script.
+This doesn't have all of the fancy progress bar stuff because it is meant for
+scripts.
+```
+sudo apt-get install name-of-your-package
+```
+_______________________________________________________________________________
+
+
+####
+
 #### Code Editor
 
 #### Configuration Management
 ```
 pip3 install ansible
 ```
-
 
 _______________________________________________________________________________
