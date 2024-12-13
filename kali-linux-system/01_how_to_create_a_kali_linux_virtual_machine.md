@@ -9,8 +9,16 @@ https://www.kali.org/get-kali/#kali-installer-images
 
 It will look like this:
 
-kali-linux-2024.3-installer-amd64.iso
+`kali-linux-2024.3-installer-amd64.iso`
 
+Create a directory in your home directory called `virtual-machines`
+
+```
+cd ~
+mkdir virtual-machines
+```
+
+Put the ISO image inside the the virtual-machines 
 _______________________________________________________________________________
 
 ## Step 2 - Verify that the iso image was not corrupted during the download
@@ -57,6 +65,8 @@ svm indicates AMD's virtualization technology (AMD-V).
 If the number is 0 then that means that you can't run virtualization
 technology OR you can, but you need to enable it in your BIOS
 
+Its usually a setting that says `enable virtualization`
+
 NOTE: It's technically a UEFI but in people still call it BIOS. 
 It's that menu that you get when you laptop is starting and you press F12.
 
@@ -78,17 +88,9 @@ sudo systemctl start libvirtd
 ```
 _______________________________________________________________________________
 
-## Create this directories
-
-virtual-machines
-
-Put the Kali Linux ISO in this directory
-
-_______________________________________________________________________________
-
 ## Open the Virtual Machine Manager GUI
 
-You should see QEMU/KVM listed
+You should see `QEMU/KVM` listed
 
 File > New Virtual Machine
 
@@ -119,10 +121,8 @@ Leave it at `automatically detect from the installation media /source`
 if it detects Kali Linux. If Kali is not there search for 
 it in the drop down list.
 
-If Kali isn't there select the latest Debian as Kali is a Debian-based distro.
-
-I chose `Debian 12` when I did this
-
+If Kali isn't there select `Debian testing (debiantesting)` as Kali is based
+of the Debian testing branch of Debian.
 
 _______________________________________________________________________________
 

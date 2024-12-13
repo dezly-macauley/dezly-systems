@@ -8,6 +8,7 @@ the packages that were available when your ISO image was released.
 ```
 sudo apt update
 ```
+
 _______________________________________________________________________________
 ### Update your system
 
@@ -22,7 +23,7 @@ and dependencies that your system does not need to avoid conflicts).
 sudo apt full-upgrade -y
 ```
 _______________________________________________________________________________
-### Install Programs
+### Install and Remove Programs
 
 How to search for a package in Kali
 
@@ -52,8 +53,17 @@ sudo apt-get install name-of-your-package
 ```
 _______________________________________________________________________________
 
+## Packages to Install
 
-####
+First make sure that your package manager is updated
+```
+sudo apt update
+```
+
+#### Software Bundles
+```
+sudo apt install software-properties-common
+```
 
 #### Code Editor
 

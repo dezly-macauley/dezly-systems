@@ -1,5 +1,5 @@
-# Sleep Consistency
+# Wakeup Time
 
-Switch off all tech and go to bed at 10:40 PM
+I wakeup at 5:20 AM every day
 
 _______________________________________________________________________________
