@@ -61,15 +61,9 @@ sudo apt update
 ```
 
 #### Software Bundles
-```
-sudo apt install software-properties-common
-```
 
 #### Code Editor
 
 #### Configuration Management
-```
-pip3 install ansible
-```
 
 _______________________________________________________________________________

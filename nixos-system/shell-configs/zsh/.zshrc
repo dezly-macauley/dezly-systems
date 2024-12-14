@@ -122,7 +122,8 @@ dezly-dojos() {
         cd ~/dezly-dojos/go-dojo/ && eval zellij
 
     elif [[ $1 == "--python" ]]; then
-        cd ~/dezly-dojos/python-dojo/ && eval zellij
+        cd ~/dezly-dojos/python-dojo/\
+        && source .venv/bin/activate && eval zellij
     #__________________________________________________________________________
     elif [[ $1 == "--svelte" ]]; then
         cd ~/dezly-dojos/svelte-dojo && eval zellij
@@ -185,12 +186,13 @@ dezly-dojos() {
 export PATH=$HOME/.npm-global/bin:$PATH
 
 #______________________________________________________________________________
+# NOTE: This will allow you to install Python packages globally
 
 # First make sure that you are in your home directory and then run the
 # following command:
 # uv venv
 # Now you can use the `uv pip install name-of-package` to install things
-export PATH="$HOME/.venv/bin/:$PATH"
+# export PATH="$HOME/.venv/bin/:$PATH"
 
 #==============================================================================
 # SECTION: Appearance
