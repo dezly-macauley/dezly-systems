@@ -16,7 +16,7 @@
         package = pkgs.postgresql_16;
 
         # This will ensure that PostgreSQL is running in the background
-        enable = true;
+        enable = false;
 
         # Enable TCIP connections
         enableTCPIP = true;

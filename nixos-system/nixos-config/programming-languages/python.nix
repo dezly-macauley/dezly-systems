@@ -8,6 +8,7 @@
 
             # The interpreter for the Python programming langauge.
             # This runs your Python Code
+            python314
             python312
             
             # The default Python package manager
@@ -20,9 +21,6 @@
 
             # The faster Python package manager written in Rust
             uv
-
-            # Pythonic Smart Contract Language for the EVM
-            vyper
 
         ];
 

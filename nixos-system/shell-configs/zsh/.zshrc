@@ -102,6 +102,15 @@ alias ls-tree="tree --gitignore"
 
 alias battery="acpi"
 #==============================================================================
+# SECTION: Projects
+
+alias current-project="cd /home/dezly-macauley/github-projects/web3py-favs/\
+&& source .venv/bin/activate && eval zellij"
+
+alias current-project-codium="cd /home/dezly-macauley/github-projects/web3py-favs/\
+&& source .venv/bin/activate && codium ."
+
+#==============================================================================
 # SECTION: Dezly Dojo
 
 # `eval zellij` is used because I want it to run zellij as if I had typed
@@ -186,13 +195,30 @@ dezly-dojos() {
 export PATH=$HOME/.npm-global/bin:$PATH
 
 #______________________________________________________________________________
-# NOTE: This will allow you to install Python packages globally
+# NOTE: UV (Python Package Management)
 
-# First make sure that you are in your home directory and then run the
-# following command:
+# First run these commands:
+# cd ~
 # uv venv
-# Now you can use the `uv pip install name-of-package` to install things
+
+# Enable shell auto completion for uv commands
+eval "$(uv generate-shell-completion zsh)"
+
+# Enable shell auto completion for uvx commands
+eval "$(uvx --generate-shell-completion zsh)"
+
+# Add the Python virtual environment created by uv to your path so that
+# you can use packages that were installed by uv (even when your virtual
+# environment is not activated)
 # export PATH="$HOME/.venv/bin/:$PATH"
+
+# This is for using programs installed by the `uv tool command`
+export PATH="/home/dezly-macauley/.local/bin:$PATH"
+
+# To install a program:
+# cd ~
+# source .venv/bin/activate
+# uv pip install name-of-package
 
 #==============================================================================
 # SECTION: Appearance

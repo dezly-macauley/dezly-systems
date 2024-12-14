@@ -11,7 +11,7 @@
         package = pkgs.mariadb;
 
         # This will ensure that the service is running in the background
-        enable = true;
+        enable = false;
 
     };
 
