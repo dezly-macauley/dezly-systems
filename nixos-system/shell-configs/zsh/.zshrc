@@ -143,8 +143,8 @@ dezly-dojos() {
     elif [[ $1 == "--vyper" ]]; then
         cd ~/dezly-dojos/vyper-dojo && eval zellij
     #__________________________________________________________________________
-    elif [[ $1 == "--mysql" ]]; then
-        cd ~/dezly-dojos/mysql-dojo && eval zellij
+    elif [[ $1 == "--sqlite" ]]; then
+        cd ~/dezly-dojos/sqlite-dojo && eval zellij
     #__________________________________________________________________________
     elif [[ $1 == "--lua" ]]; then
         cd ~/dezly-dojos/lua-dojo && eval zellij

@@ -137,6 +137,7 @@
         # SUB_SECTION: Database Languages
         # ./database-systems/postgresql.nix
         ./database-systems/mysql.nix
+        ./database-systems/sqlite.nix
 
         # SUB_SECTION: Programming Languages
 
@@ -184,22 +185,6 @@
         # SUB_SECTION: Web Browsers
 
         firefox
-
-#_____________________________________________________________________________
-
-        # SUB_SECTION: SQLite
-
-        #SQLite is a widely-used, fast, 
-        # and self-contained SQL database engine, 
-        # implemented in C, 
-        # that powers countless applications on mobile devices, 
-        # computers, and embedded systems globally.
-        sqlite
-
-        # An alternative to the built-in SQL cli
-        # litecli has quality of life improvements like syntax highlighting,
-        # autocompletion, and command history
-        litecli
 
         # SECTION: Document Creation
 
