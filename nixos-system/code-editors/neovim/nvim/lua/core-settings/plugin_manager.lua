@@ -18,6 +18,7 @@ require("lazy").setup({
     { import = "plugin-settings.appearance" },
     { import = "plugin-settings.coding" },
     { import = "plugin-settings.syntax-highlighting" },
+    { import = "plugin-settings.database-management"},
   },
 
 })

@@ -39,6 +39,9 @@ return {
             -- on how to locally install npm global packages on NixOS
 
             -------------------------------------------------------------------
+            
+            lsp.sqls.setup({})
+
             -- Front-End Development
             
 

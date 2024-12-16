@@ -115,6 +115,15 @@ return {
           { name = 'buffer' }, -- recently added
         },
       }
+
+      -- NOTE: Added for Nvim dadbod
+        cmp.setup.filetype({ "sql" }, {
+          sources = {
+            { name = "vim-dadbod-completion" },
+            { name = "buffer" },
+          },
+        })
+
     end,
   },
 

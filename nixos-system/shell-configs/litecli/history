@@ -1,0 +1,77 @@
+
+# 2024-12-16 07:57:49.265753
++exit
+
+# 2024-12-16 09:10:24.352023
++create table(
++id integer,
++hero_name text
++);
+
+# 2024-12-16 09:11:23.228350
++create table superheroes(
++id integer,
++hero_name text,
++);
+
+# 2024-12-16 09:13:00.476738
++.tables;
+
+# 2024-12-16 09:13:18.422956
++.tables
++;
+
+# 2024-12-16 09:15:05.634722
++create table superheroes(
++id integer,
++hero_name text);
+
+# 2024-12-16 09:15:13.612196
++.tables
++;
+
+# 2024-12-16 09:19:04.812111
++select count(*) from superheroes;
+
+# 2024-12-16 09:20:56.276770
++pragma table_info(superheroes);
+
+# 2024-12-16 09:25:18.808739
++.schema superheroes
++;
+
+# 2024-12-16 09:34:08.350027
++insert into superheroes values(67, 'Spiderman');
+
+# 2024-12-16 09:36:20.235398
++.tables;
+
+# 2024-12-16 09:36:55.081019
++select count(*) from superheroes;
+
+# 2024-12-16 09:37:12.907422
++pragma table_info(superheroes);
+
+# 2024-12-16 09:38:13.041375
++.schema superheroes;
+
+# 2024-12-16 09:44:11.304456
++select * from superheroes limit 1;
+
+# 2024-12-16 09:44:17.294741
++select * from superheroes limit 2;
+
+# 2024-12-16 09:44:34.782120
++select * from superheroes;
+
+# 2024-12-16 09:54:45.341972
++select * from superheroes limit 5;
+
+# 2024-12-16 09:57:09.657293
++exit
+
+# 2024-12-16 10:24:58.394396
++.tables;
+
+# 2024-12-16 10:25:09.183607
++exit
