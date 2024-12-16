@@ -67,7 +67,6 @@ echo $backup_location
 echo " "
 
 #==============================================================================
-
                             # SECTION: Shell Configuration ( ZSH )
 
 # Backup the previous configuration
@@ -85,7 +84,6 @@ echo "Zsh configuration installed successfully"
 echo " "
 
 #==============================================================================
-
                             # SECTION: Version Control (Git)
 
 # Backup the previous configuration
@@ -103,7 +101,6 @@ echo "Git configuration installed successfully"
 echo " "
 
 #==============================================================================
-
                             # SECTION: Terminal Emulator ( Alacritty )
 
 # The location of the latest Alacritty configuration
@@ -132,6 +129,34 @@ echo " "
 echo "Alacritty configuration installed successfully"
 echo " "
 
+#==============================================================================
+# SECTION: Database Shell (litecli)
+
+# The location of the latest litecli configuration
+source_dir="$full_repo_path/shell-configs/litecli"
+
+# The location where litecli expects the configuration to be,
+# this is where the sym link will be created
+target_dir="$HOME/.config/litecli"
+
+# Check if the target directory already exists then make a backup 
+if [ -d "$target_dir" ]; then
+
+    # Make a backup of the actual configuration, not the symlink
+    real_target_dir=$(realpath "$target_dir")
+    cp -r "$real_target_dir" "$backup_location"
+
+    # Remove the previous configuration
+    rm -rf "$target_dir"
+
+fi
+
+# Create the symlink of the latest configuration
+ln -s "$source_dir" "$target_dir"
+
+echo " "
+echo "litecli configuration installed successfully"
+echo " "
 #==============================================================================
 
 			    # SECTION: Code Editor (Neovim)

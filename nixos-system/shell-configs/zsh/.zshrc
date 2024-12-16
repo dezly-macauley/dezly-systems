@@ -12,7 +12,7 @@ alias edit-nixos="cd $HOME/dezly-systems/nixos-system/nixos-config/\
 #==============================================================================
 # SECTION: NixOS Maintanance
 
-alias dezly-systems="cd /home/dezly-macauley/dezly-systems"
+alias systems="cd /home/dezly-macauley/dezly-systems"
 
 alias nixos-channel-update="sudo nix-channel --update"
 
@@ -112,6 +112,8 @@ alias current-project-codium="cd /home/dezly-macauley/github-projects/web3py-fav
 
 #==============================================================================
 # SECTION: Dezly Dojo
+
+alias dojos="cd /home/dezly-macauley/dezly-dojos/"
 
 # `eval zellij` is used because I want it to run zellij as if I had typed
 # it from the command line and use:
