@@ -75,3 +75,207 @@
 
 # 2024-12-16 10:25:09.183607
 +exit
+
+# 2024-12-16 12:14:23.261895
++create table my_strict_table(
++fav_num integer,
++user_name string) strict;
+
+# 2024-12-16 12:14:40.734714
++create table my_strict_table(
++fav_num integer,
++user_name text) strict;
+
+# 2024-12-16 12:14:45.057222
++.tables;
+
+# 2024-12-16 12:15:32.517704
++insert into my_strict_table values (1, 'hello');
+
+# 2024-12-16 12:15:42.990625
++select * from my_strict_table;
+
+# 2024-12-16 12:22:25.605208
++select date();
+
+# 2024-12-16 12:23:35.303787
++select datetime();
+
+# 2024-12-16 12:24:46.498390
++select time();
+
+# 2024-12-16 12:39:17.224494
++.tables;
+
+# 2024-12-16 12:41:59.965142
++create table active_players(
++id integer,
++user_name text,
++has_premium_account integer);
+
+# 2024-12-16 12:42:03.135431
++.tables;
+
+# 2024-12-16 12:42:46.213195
++.schema active_players;
+
+# 2024-12-16 13:10:39.513199
++select * from active_players;
+
+# 2024-12-16 13:12:18.887966
++insert into active_players values (45, 'Jane', 1);
++insert into active_players values (45, 'Patrick', 0);
+
+# 2024-12-16 13:12:27.290905
++select * from active_players;
+
+# 2024-12-16 13:13:29.008491
++select * from active_players where has_premium_account = 1;
+
+# 2024-12-16 13:14:07.053100
++select * from active_players where has_premium_account = true;
+
+# 2024-12-16 13:14:15.178862
++select * from active_players where has_premium_account = false;
+
+# 2024-12-16 13:49:21.603464
++CREATE TABLE sales (
++    id INTEGER,
++    amount REAL
++) strict;
+
+# 2024-12-16 13:49:28.999709
++INSERT INTO sales (id, amount) VALUES (1, 100.50);
++INSERT INTO sales (id, amount) VALUES (2, 200.25);
++INSERT INTO sales (id, amount) VALUES (3, 50.00);
++INSERT INTO sales (id, amount) VALUES (4, 150.75);
+
+# 2024-12-16 13:49:37.940584
++SELECT * FROM sales;
+
+# 2024-12-16 13:49:52.866478
++SELECT SUM(amount) AS total_sales FROM sales;
+
+# 2024-12-16 14:09:56.774415
++create table villains(
++villain_id integer primary key,
++villain_name text);
+
+# 2024-12-16 14:11:04.921967
++insert into villains values 
++(1, 'Mag')
++(2, 'Zen');
+
+# 2024-12-16 14:11:49.995534
++insert into villains values (
++(1, 'Mag')
++(2, 'Zen')
++) strict;
+
+# 2024-12-16 14:13:10.496674
++insert into villains values 
++(1, 'Mag'),
++(2, 'Zen') strict;
+
+# 2024-12-16 14:13:31.797606
++insert into villains values 
++(1, 'Mag'),
++(2, 'Zen');
+
+# 2024-12-16 14:13:46.630934
++select * from villains;
+
+# 2024-12-16 14:13:58.919589
++.schema villains;
+
+# 2024-12-16 14:30:39.901198
++create table favourite_songs(
++song_id integer primary key autoincrement,
++song_nam text
++);
+
+# 2024-12-16 14:33:31.908562
++.tables;
+
+# 2024-12-16 14:33:40.166933
++drop table villains;
+
+# 2024-12-16 14:33:48.428698
++drop table sales;
+
+# 2024-12-16 14:33:54.556250
++.tables;
+
+# 2024-12-16 14:34:03.740852
++drop table favourite_songs;
+
+# 2024-12-16 14:45:36.349911
++.tables;
+
+# 2024-12-16 15:09:03.354182
++exit
+
+# 2024-12-16 15:53:00.335899
++.tables;
+
+# 2024-12-16 15:57:52.848472
++select json_extract(
++'{"foo": {"bar": 42}}',
++'$.foo');
+
+# 2024-12-16 20:42:23.340295
++.tables;
+
+# 2024-12-16 20:42:53.411377
++create table if not exists users(
++user_id integer primary key autoincrement,
++json_data text);
+
+# 2024-12-16 20:43:22.290172
++INSERT INTO users (json_data)
++VALUES ('[
++    {"id": 1, "name": "Alice", "age": 30, "email": "alice@example.com"},
++    {"id": 2, "name": "Bob", "age": 25, "email": "bob@example.com"},
++    {"id": 3, "name": "Charlie", "age": 35, "email": "charlie@example.com"}
++]');
+
+# 2024-12-16 20:43:35.371246
++select * from users;
+
+# 2024-12-16 20:46:21.451237
++drop table users;
+
+# 2024-12-16 20:46:45.927632
++CREATE TABLE users (
++    id INTEGER PRIMARY KEY autoincrement,
++    json_data TEXT
++);
+
+# 2024-12-16 20:47:07.810246
++INSERT INTO users (id, json_data)
++VALUES (1, '[
++    {
++        "id": 1,
++        "name": "Alice",
++        "age": 30,
++        "email": "alice@example.com"
++    },
++    {
++        "id": 2,
++        "name": "Bob",
++        "age": 25,
++        "email": "bob@example.com"
++    },
++    {
++        "id": 3,
++        "name": "Charlie",
++        "age": 35,
++        "email": "charlie@example.com"
++    }
++]');
+
+# 2024-12-16 20:47:11.055347
++select * from users;
+
+# 2024-12-16 21:04:30.132877
++exit
