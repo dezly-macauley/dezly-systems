@@ -1,8 +1,8 @@
 return {
 
     -- NOTE: To check what the correct names for for the languages are:
-    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lsp-configs
     -- https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lsp-configs
 
     {
         "neovim/nvim-lspconfig",
@@ -11,27 +11,42 @@ return {
             local lsp = require("lspconfig")
 
             -- NOTE: nvim-lspconfig does not actually install 
-            -- any of these language servers. It simply provides
-            -- a way for Neovim to use the language servers that have been
-            -- installed on your system.
-            -- E.g. `lsp.rust_analyzer.setup({})` this won't do anything
+            -- any of these language servers or the programs that 
+            -- they require. 
+            -- It simply provides a way for Neovim to use the 
+            -- language servers that have been installed on your system.
+            -------------------------------------------------------------
+            -- E.g. Adding the line 
+            -- `lsp.rust_analyzer.setup({})` won't do anything
             -- unless you have Rust Analyzer on your system
 
+            -------------------------------------------------------------------
+            -- SUB_SECTION: Low Level Programming
+        
+            -- NOTE: Required Packages:
+            -- rust-analyzer
+            lsp.rust_analyzer.setup({}) -- Rust
+       
+            -------------------------------------------------------------------
+            -- SUB_SECTION: Back-End Development & AI
+
+            -- NOTE: Required Packages:
+            -- gopls
+            lsp.gopls.setup({}) -- Go
+
+            -- NOTE: Required Packages:
+            -- deno
+            lsp.pyright.setup({}) -- Python
 
             -------------------------------------------------------------------
-            -- Low Level Programming
-            lsp.rust_analyzer.setup({}) -- Rust
+            -- SUB_SECTION: Front-End Development
+
+            -- NOTE: Required Packages:
+            -- deno
+            lsp.denols.setup({}) -- TypeScript, JavaScript
+
+            -------------------------------------------------------------------
             
-            -------------------------------------------------------------------
-            -- Back-End Development
-            lsp.gopls.setup({}) -- Go
-            lsp.pyright.setup({}) -- Python
-            lsp.intelephense.setup({}) -- PHP
-        
-            -------------------------------------------------------------------
-        
-            -- Smart Contract Development
-        
             lsp.solidity_ls.setup({}) -- Solidity
 
             -- npm install -g @vscode-solidity-server
@@ -39,11 +54,7 @@ return {
             -- on how to locally install npm global packages on NixOS
 
             -------------------------------------------------------------------
-            
             lsp.sqls.setup({})
-
-            -- Front-End Development
-            
 
             -------------------------------------------------------------------
             -- User Interface Design

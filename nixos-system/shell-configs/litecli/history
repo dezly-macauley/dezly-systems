@@ -279,3 +279,160 @@
 
 # 2024-12-16 21:04:30.132877
 +exit
+
+# 2024-12-17 06:51:59.138141
++select 6 + 6;
+
+# 2024-12-17 06:52:24.434124
++select 5 + 3;
+
+# 2024-12-17 06:55:55.229054
++select json(%);
+
+# 2024-12-17 06:56:38.432445
++select 7 / 0;
+
+# 2024-12-17 06:57:23.228874
++select json({});
+
+# 2024-12-17 07:06:21.888774
++select json('{}');
+
+# 2024-12-17 07:06:29.638365
++select json('[{}]');
+
+# 2024-12-17 07:12:00.444604
++select json('
++{},
++{},
++{}
++');
+
+# 2024-12-17 07:12:49.139029
++select json('
++{}
++');
+
+# 2024-12-17 07:13:37.904605
++select json('
++[{},
++{},
++{}]
++');
+
+# 2024-12-17 07:13:43.810981
++select json('
++[{},
++{},
++{},]
++');
+
+# 2024-12-17 07:16:40.944908
++select json_object('user_name', 'Dezly');
+
+# 2024-12-17 07:20:32.232455
++SELECT json_array(
++    json('{"name": "Lee", "age": 36}'),
++    json('{"name": "Emilia", "age": 19}')
++);
+
+# 2024-12-17 07:33:13.078928
++SELECT json_array_length(
++    json('{"name": "Lee", "age": 36}'),
++    json('{"name": "Emilia", "age": 19}')
++);
+
+# 2024-12-17 07:34:04.710080
++SELECT json_array_length(
++    json_array(
++        json('{"name": "Lee", "age": 36}'),
++        json('{"name": "Emilia", "age": 19}')
++    )
++);
+
+# 2024-12-17 08:42:57.081629
++select json_extract(
++'{
++    "name": "John", 
++    "age": 30, 
++    "city": "London"
++}',
++'$');
+
+# 2024-12-17 08:59:57.083776
++select json_extract(
++'{
++    "name": "John", 
++    "age": 30, 
++    "city": "London"
++}',
++'$.city');
+
+# 2024-12-17 09:05:41.621034
++select json_extract(
++'{
++    "name": "John", 
++    "age": 30, 
++    "city": "London"
++}') -> '$.city';
+
+# 2024-12-17 09:06:43.376554
++select json_extract(
++'{
++    "name": "John", 
++    "age": 30, 
++    "city": "London"
++}')->'$.city';
+
+# 2024-12-17 09:07:48.746818
++SELECT json_extract(
++  '{"name": "John", "age": 30, "city": "London"}', 
++  '$.city'
++);
+
+# 2024-12-17 09:08:04.040235
++select json_extract(
++'{
++    "name": "John", 
++    "age": 30, 
++    "city": "London"
++}') ->> '$.city';
+
+# 2024-12-17 09:10:28.275300
++select json('
++    {
++        "name": "John", 
++        "age": 30, 
++        "city": "London"
++    }
++') -> '$.city';
+
+# 2024-12-17 09:11:41.003999
++select json('
++    {
++        "name": "John", 
++        "age": 30, 
++        "city": "London"
++    }
++') ->> '$.city';
+
+# 2024-12-17 09:18:45.681845
++select json('
++    {
++        "name": "John", 
++        "age": 30, 
++        "city": "London"
++    }
++') -> '$';
+
+# 2024-12-17 09:18:56.981079
++select json('
++    {
++        "name": "John", 
++        "age": 30, 
++        "city": "London"
++    }
++') ->> '$';
+
+# 2024-12-17 15:03:24.547275
++exit

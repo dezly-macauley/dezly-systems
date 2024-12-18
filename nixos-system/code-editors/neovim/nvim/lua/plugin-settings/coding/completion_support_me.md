@@ -1,10 +1,20 @@
 return {
+-------------------------------------------------------------------------------
+    -- SECTION: Troubleshooting and adding new completion sources
 
-    { -- Autocompletion
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      -- Snippet Engine & its associated nvim-cmp source
+    -- If you are having issues with completion run the following 
+    -- command in Neovim
+    -- `:cmpStatus` 
+
+    -- To check out a list of completion sources:
+    -- https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
+-------------------------------------------------------------------------------
+
+    {
+        "hrsh7th/nvim-cmp",
+        event = "InsertEnter",
+        dependencies = {
+          -- Snippet Engine & its associated nvim-cmp source
       {
         'L3MON4D3/LuaSnip',
         build = (function()
@@ -17,40 +27,37 @@ return {
           return 'make install_jsregexp'
         end)(),
         dependencies = {
-          -- `friendly-snippets` contains a variety of premade snippets.
-          --    See the README about individual language/framework/plugin snippets:
-          --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+            "hrsh7th/cmp-buffer",
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-nvim-lsp',
+
+              -- `friendly-snippets` contains a variety of premade snippets.
+              --    See the README about individual language/framework/plugin snippets:
+              --    https://github.com/rafamadriz/friendly-snippets
+              {
+                'rafamadriz/friendly-snippets',
+                config = function()
+                  require('luasnip.loaders.from_vscode').lazy_load()
+                end,
+              },
+            },
+          },
+          'saadparwaiz1/cmp_luasnip',
+
         },
-      },
-      'saadparwaiz1/cmp_luasnip',
 
-      -- Adds other completion capabilities.
-      --  nvim-cmp does not ship with all sources by default. They are split
-      --  into multiple repos for maintenance purposes.
-        'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-path',
-        "hrsh7th/cmp-buffer",
-    },
-    config = function()
-      -- See `:help cmp`
-      local cmp = require 'cmp'
-      local luasnip = require 'luasnip'
-      luasnip.config.setup {}
+        config = function()
+            local cmp = require 'cmp'
+            local luasnip = require 'luasnip'
+            luasnip.config.setup {}
 
-      cmp.setup {
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
-        completion = { completeopt = 'menu,menuone,noinsert' },
-
+            cmp.setup {
+            snippet = {
+              expand = function(args)
+                luasnip.lsp_expand(args.body)
+              end,
+            },
+            completion = { completeopt = 'menu,menuone,noinsert' },
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
         --
@@ -108,21 +115,19 @@ return {
             name = 'lazydev',
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
             group_index = 0,
-          },
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' },
-          { name = 'path' },
-          { name = 'buffer' }, -- recently added
+        },
+            -- { name = 'nvim_lsp' },
+            -- { name = 'luasnip' },
+            -- { name = 'path' },
+            -- { name = 'buffer' },
+            { name = "nvim-lsp"},
+            { name = "path"},
+            { name = "cmp-buffer"},
+
+            -- NOTE: This line requires vim-dadbod-completion to be installed
+            { name = "vim-dadbod-completion" },
         },
       }
-
-      -- NOTE: Added for Nvim dadbod
-        cmp.setup.filetype({ "sql" }, {
-          sources = {
-            { name = "vim-dadbod-completion" },
-            { name = "buffer" },
-          },
-        })
 
     end,
   },

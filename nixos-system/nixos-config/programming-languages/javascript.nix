@@ -5,6 +5,9 @@
     # ABOUT: JavaScript
 
         environment.systemPackages = with pkgs; [
+            
+            # The language server for the Svelte framework
+            svelte-language-server
 
             # The most used JavaScript runtime.
             # This also include `npm` (Node package manager)
