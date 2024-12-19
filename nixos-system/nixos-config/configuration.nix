@@ -186,6 +186,9 @@
 
         firefox
 
+        # SUB_SECTION: GNU Privacy Guard (For verifying Linux ISO images)
+        gnupg
+
         # SECTION: Document Creation
 
         libreoffice # A collection of document creation programs
