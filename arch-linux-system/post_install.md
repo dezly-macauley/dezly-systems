@@ -64,6 +64,12 @@ When it opens up just press `q` to quit.
 Then create your .zshrc file:
 `touch .zshrc`
 
+Run this command after switching to starship, and you already have a nerd
+font:
+
+```
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+```
 _______________________________________________________________________________
 
 Add this to the bottom of your `.zshrc` file:
@@ -85,7 +91,9 @@ or if you have pipewire but it is outdated.
 ```
 sudo pacman -S --needed pipewire 
 sudo pacman -S --needed wireplumber
+sudo pacman -S --neeeded qemu-audio-pipewire
 ```
+
 _______________________________________________________________________________
 Clipboard
 
@@ -101,6 +109,11 @@ sudo pacman -S --needed wezterm
 sudo pacman -S --needed hyprland
 sudo pacman -S --needed qt5-wayland
 sudo pacman -S --needed qt6-wayland
+
+sudo pacman -S --needed dunst
+sudo pacman -S --needed xdg-desktop-portal-hyprland
+sudo pacman -S --needed xdg-desktop-portal-gtk
+
 ```
 _______________________________________________________________________________
 Code Editor:
@@ -118,6 +131,22 @@ Wallpapers:
 
 ```
 sudo pacman -S hyprpaper
+```
+
+_______________________________________________________________________________
+Language Servers
+
+-- Lua
+
+```
+sudo pacman -S lua-language-server
+```
+
+_______________________________________________________________________________
+Fonts
+
+```
+sudo pacman -S ttf-meslo-nerd
 ```
 
 _______________________________________________________________________________
