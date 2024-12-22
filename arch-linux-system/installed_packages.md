@@ -1,4 +1,4 @@
-# Arch Linux - Post Install
+# Arch Linux - Installed Packages
 _______________________________________________________________________________
 ## Update the system
 
@@ -13,6 +13,69 @@ sudo pacman -Syu
 pacman -Q > default_installed_packages.md
 
 pacman -Qe > explicit_default_installed_packages.md
+
+_______________________________________________________________________________
+## Install the Rust programming language (This is required by Paru)
+
+```
+sudo pacman -S --needed rustup 
+```
+
+Download the lastest stable release of Rust compiler and set it as the default Rust compiler on your system.
+
+```
+rustup default stable
+```
+
+Next use rustup to install rust-analyzer. This is better than installing Rustup from your package manager. This is because installing using rustup will ensure that the version of the lsp matches the version of rust that rustup is using.
+```
+rustup component add rust-analyzer
+```
+
+Add Rust to your path by adding this line to your .zshrc
+
+find ~/.rustup -name "rust-analyzer"
+
+```
+export PATH="$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin:$PATH"
+```
+
+```
+export PATH="$HOME/.cargo/bin:$PATH"
+```
+
+_______________________________________________________________________________
+To check that everything is working:
+
+~ 
+❯ rustup --version
+rustup 1.27.1 (2024-05-07)
+info: This is the version for the rustup toolchain manager, not the rustc compiler.
+info: The currently active `rustc` version is `rustc 1.83.0 (90b35a623 2024-11-26)`
+
+~ 
+❯ rustc --version
+rustc 1.83.0 (90b35a623 2024-11-26)
+
+~ 
+❯ rust-analyzer --version
+rust-analyzer 1.83.0 (90b35a6 2024-11-26)
+
+_______________________________________________________________________________
+## Install an AUR helper
+
+https://github.com/Morganamilo/paru
+
+```
+sudo pacman -S --needed base-devel
+mkdir -p ~/.aur-helper 
+cd .aur-helper
+
+(Not done!!! Install Rust first)
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
 
 _______________________________________________________________________________
 Backup terminal emulator
@@ -90,10 +153,24 @@ or if you have pipewire but it is outdated.
 
 ```
 sudo pacman -S --needed pipewire 
-sudo pacman -S --needed wireplumber
+sudo pacman -S --needed lib32-pipewire
+sudo pacman -S --needed pipewire-pulse
+sudo pacman -S --needed pipewire-alsa
 sudo pacman -S --neeeded qemu-audio-pipewire
+
+sudo pacman -S --needed alsa-firmware
+sudo pacman -S --needed alsa-tools
+sudo pacman -S --needed lib32-alsa-lib
+
+sudo pacman -S --needed wireplumber
+sudo pacman -S --needed sof-firmware
 ```
 
+### AUR packages
+
+```
+paru -S pwvucontrol 
+```
 _______________________________________________________________________________
 Clipboard
 
@@ -148,5 +225,30 @@ Fonts
 ```
 sudo pacman -S ttf-meslo-nerd
 ```
+_______________________________________________________________________________
+### Terminal (Nicer Outputs
+
+```
+sudo pacman -S --needed lsd 
+sudo pacman -S --needed tree
+```
+_______________________________________________________________________________
+
+For zsh syntax highlighting first check where the file is on your system
+
+❯ sudo find /usr/ -name zsh-syntax-highlighting.zsh
+[sudo] password for dezly-macauley: 
+/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+Then once you find it add this line to the end of your .zshrc
+
+It should be placed after the starship shell prompt, otherwise starship
+will overwrite this syntax highlighting
 
 _______________________________________________________________________________
+
+```
+sudo pacman -S --needed zsh-autosuggestions
+```
+_______________________________________________________________________________
+
