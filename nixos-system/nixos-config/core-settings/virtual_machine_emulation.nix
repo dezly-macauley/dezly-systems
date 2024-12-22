@@ -31,6 +31,8 @@
             # and traffic control in Linux
             iproute2
 
+            spice-vdagent
+
         ];
 
 }
