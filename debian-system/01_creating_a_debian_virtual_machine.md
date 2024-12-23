@@ -184,6 +184,7 @@ _______________________________________________________________________________
 > https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS
 
 This confirms that the file was not corrupted during the download.
+
 _______________________________________________________________________________
 ## Phase 3 - Create the Virtual Machine
 _______________________________________________________________________________

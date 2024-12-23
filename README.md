@@ -29,20 +29,18 @@ just blindly copies and pastes code from tutorials and AI without having an
 understanding of what that code is doing.
 _______________________________________________________________________________
 
-### Secondary Operating System: Kali Linux
+### Secondary Operating System: Debian
 
-<img src="./kali-linux-system/kali_linux.png" width="100" height="100" />
+<img src="./debian-system/debian.png" width="100" height="100" />
 
-- Comes with pre-installed software packages for ethical hacking
-- It is based on Debian testing, so it is good for learning how regular 
-Linux systems work.
-- Kali is usually run as a virtual machine, it is not intended for daily use
-so it gives me experience with virtual machines.
+- I like to create my own custom setup using Debian
+- I also dislike forks
 
-**Ethical Hacking**
+_______________________________________________________________________________
+### Tertiary Operating System: Arch 
 
-If you're trying to proactively `hack` an app or system, 
-then you need to understand the `potential flaws` that a software engineer 
-could make or things that they could forget to secure.
+<img src="./arch-linux-system/arch_linux.png" width="100" height="100" />
+
+- Where it all started
 
 _______________________________________________________________________________
