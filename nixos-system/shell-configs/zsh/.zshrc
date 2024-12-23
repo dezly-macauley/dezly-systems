@@ -13,7 +13,7 @@ alias edit-nixos="cd $HOME/dezly-systems/nixos-system/nixos-config/\
 #==============================================================================
 # SECTION: NixOS Maintanance
 
-alias systems="cd /home/dezly-macauley/dezly-systems"
+alias sys="cd /home/dezly-macauley/dezly-systems"
 
 alias nixos-channel-update="sudo nix-channel --update"
 
@@ -79,14 +79,14 @@ alias flight-mode="nmcli radio all off"
 
 alias reload-shell="exec zsh"
 
-clear_shell_history() {
+shell_history_clear() {
     cat /dev/null > ~/.zsh_history && \
     rm -f ~/.zsh_history && \
     touch ~/.zsh_history && \
     exec zsh
 }
 
-disable_shell_history() {
+shell_history_disable() {
     unset HISTFILE
     export HISTSIZE=0
 }
@@ -114,7 +114,7 @@ alias current-project-codium="cd /home/dezly-macauley/github-projects/web3py-fav
 #==============================================================================
 # SECTION: Dezly Dojo
 
-alias dojos="cd /home/dezly-macauley/dezly-dojos/"
+alias doj="cd /home/dezly-macauley/dezly-dojos/"
 
 # `eval zellij` is used because I want it to run zellij as if I had typed
 # it from the command line and use:
