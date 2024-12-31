@@ -3,12 +3,6 @@ _______________________________________________________________________________
 
 ### About
 <img src="./dezly_systems.gif" width="300" height="200" />
-
-My systems are configured for the purpose of `🔧 Software Engineering` 
-and `🕵 Ethical Hacking`.
-
-I believe that the two are inseparable. Each one sharpens the skills in the 
-other and gives a well-rounded perspective to the tech world.
 _______________________________________________________________________________
 
 ### Primary Operating System: NixOS
