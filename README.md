@@ -28,19 +28,3 @@ you have built from threat actors. I never want to be a software engineer who
 just blindly copies and pastes code from tutorials and AI without having an
 understanding of what that code is doing.
 _______________________________________________________________________________
-
-### Secondary Operating System: Debian
-
-<img src="./debian-system/debian.png" width="100" height="100" />
-
-- I like to create my own custom setup using Debian
-- I also dislike forks
-
-_______________________________________________________________________________
-### Tertiary Operating System: Arch 
-
-<img src="./arch-linux-system/arch_linux.png" width="100" height="100" />
-
-- Where it all started
-
-_______________________________________________________________________________
