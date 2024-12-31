@@ -57,10 +57,6 @@
             # `pgcli` has autocompletion and syntax highlighting.
             pgcli
 
-            # A cross-platform graphical user interface,
-            # that supports most SQL databases
-            dbeaver-bin
-
         ];
 
 }
